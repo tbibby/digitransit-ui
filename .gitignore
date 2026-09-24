@@ -63,3 +63,19 @@ lerna-publish-summary.json
 !.yarn/versions
 .pnp.*
 .npmrc
+
+# NTA-internal additions (not part of upstream digitransit-ui)
+# Project-management/planning notes: internal-only, not part of the software
+# itself, so excluded from the AGPL Corresponding Source obligation - see
+# RESEARCH.md's licensing section for the reasoning.
+CONTEXT.md
+TASKS.md
+TECHNICAL-IMPLEMENTATION.md
+RESEARCH.md
+
+# Real secrets (API keys, subscription tokens, etc). digitransit-ui reads
+# these from process.env at runtime, never hardcodes them in committed
+# config - keep it that way, and never commit a real .env here.
+.env
+.env.*
+!.env.example
