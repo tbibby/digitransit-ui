@@ -119,6 +119,16 @@ export default {
         name: 'about-this-service',
         route: '/tietoja-palvelusta',
       },
+      // AGPLv3 §13: this is a modified fork run as a network service, so a
+      // reachable link to the Corresponding Source (here: the `nta` branch
+      // HEAD, pushed as we go per CONTEXT.md's "Fork setup") must be
+      // available to anyone interacting with the running app, not just in
+      // our own docs. Explicit `label` (rather than `name` + an i18n
+      // message id) since this config is English-only.
+      {
+        label: 'Source code (AGPLv3 / EUPL v1.2)',
+        href: 'https://github.com/tbibby/digitransit-ui/tree/nta',
+      },
     ],
   },
 
@@ -128,6 +138,7 @@ export default {
         header: 'About this service',
         paragraphs: [
           'This is a pilot journey planner for the National Transport Authority (Ireland), built on the open-source Digitransit platform.',
+          'This service is a modified fork of Digitransit-UI, licensed under the GNU Affero General Public License v3 (or later), also available under the European Union Public Licence v1.2. The complete source code corresponding to this running version is published at <a href="https://github.com/tbibby/digitransit-ui/tree/nta" target="_blank" rel="noreferrer">github.com/tbibby/digitransit-ui</a>.',
         ],
       },
     ],
