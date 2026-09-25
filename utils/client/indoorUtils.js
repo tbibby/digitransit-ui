@@ -82,10 +82,11 @@ export function getEntranceObject(previousLeg, leg) {
         step.feature?.__typename === 'Entrance',
     );
   // Select the entrance to the outside if there are multiple entrances.
-  const entranceObject =
-    previousLeg?.mode === 'SUBWAY'
-      ? entranceObjects[entranceObjects.length - 1]
-      : entranceObjects[0];
+  // `transitLeg` is mode-agnostic (true for any transit vehicle leg, not
+  // just SUBWAY), so this covers rail/bus/tram/ferry/etc. transfers too.
+  const entranceObject = previousLeg?.transitLeg
+    ? entranceObjects[entranceObjects.length - 1]
+    : entranceObjects[0];
 
   return entranceObject;
 }
@@ -99,19 +100,25 @@ export function getEntranceStepIndex(previousLeg, leg) {
 
 export function getIndoorLegType(previousLeg, leg, nextLeg) {
   const entranceObject = getEntranceObject(previousLeg, leg);
-  // Outdoor routing starts from an entrance if the leg started from the subway.
+  // Outdoor routing starts from an entrance if the leg started from a
+  // transit stop with indoor pathway data. This used to be gated on
+  // `mode === 'SUBWAY'` (HSL's own Helsinki-metro use case); generalized to
+  // any transit mode (rail, bus, tram, etc.) via the mode-agnostic
+  // `transitLeg`/`vehicleMode` fields, since the presence of an actual
+  // `Entrance` step (checked above via `entranceObject`) is what should
+  // gate this, not the adjacent leg's specific vehicle mode.
   if (
     entranceObject &&
-    ((leg.mode === 'WALK' && previousLeg?.mode === 'SUBWAY') ||
-      leg.from.stop?.vehicleMode === 'SUBWAY')
+    ((leg.mode === 'WALK' && previousLeg?.transitLeg) ||
+      leg.from.stop?.vehicleMode)
   ) {
     return IndoorLegType.StepsBeforeEntranceInside;
   }
-  // Indoor routing starts from an entrance if the leg ends in the subway.
+  // Indoor routing starts from an entrance if the leg ends at a transit stop
+  // with indoor pathway data (see note above).
   if (
     entranceObject &&
-    ((leg.mode === 'WALK' && nextLeg?.mode === 'SUBWAY') ||
-      leg.to.stop?.vehicleMode === 'SUBWAY')
+    ((leg.mode === 'WALK' && nextLeg?.transitLeg) || leg.to.stop?.vehicleMode)
   ) {
     return IndoorLegType.StepsAfterEntranceInside;
   }

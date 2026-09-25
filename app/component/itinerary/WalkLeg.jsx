@@ -131,14 +131,17 @@ function WalkLeg({
     previousLeg,
     leg,
   );
-  // do not render subway exit/entrance if transfer happens within a station
+  // do not render exit/entrance info if transfer happens within a station
   const hideSubwayEntrances = subwayTransferUsesSameStation(
     previousLeg,
     nextLeg,
   );
+  // Mode-agnostic (not just SUBWAY, see utils/client/indoorUtils.js) and
+  // gated on an actual Entrance step being present (via indoorLegType),
+  // not just leg mode, so this doesn't render a generic entrance icon for
+  // stops that have no pathway/entrance data at all.
   const showSubwayEntranceInfo =
-    (nextLeg?.mode === 'SUBWAY' || previousLeg?.mode === 'SUBWAY') &&
-    !hideSubwayEntrances;
+    indoorLegType !== IndoorLegType.NoStepsInside && !hideSubwayEntrances;
 
   const getMainRow = () => (
     <div key={index} className="row itinerary-row">
@@ -315,13 +318,14 @@ function WalkLeg({
           </div>
         )}
         <div className="itinerary-leg-action">
-          {previousLeg?.mode === 'SUBWAY' && !hideSubwayEntrances && (
-            <SubwayEntranceInfo
-              type="exit"
-              entranceName={entranceName}
-              entranceAccessible={entranceAccessible}
-            />
-          )}
+          {indoorLegType === IndoorLegType.StepsBeforeEntranceInside &&
+            !hideSubwayEntrances && (
+              <SubwayEntranceInfo
+                type="exit"
+                entranceName={entranceName}
+                entranceAccessible={entranceAccessible}
+              />
+            )}
           <div
             className={cx('itinerary-leg-action-content', {
               'subway-entrance-info': showSubwayEntranceInfo,
@@ -341,13 +345,14 @@ function WalkLeg({
               focusAction={focusToLeg}
             />
           </div>
-          {nextLeg?.mode === 'SUBWAY' && !hideSubwayEntrances && (
-            <SubwayEntranceInfo
-              type="entrance"
-              entranceName={entranceName}
-              entranceAccessible={entranceAccessible}
-            />
-          )}
+          {indoorLegType === IndoorLegType.StepsAfterEntranceInside &&
+            !hideSubwayEntrances && (
+              <SubwayEntranceInfo
+                type="entrance"
+                entranceName={entranceName}
+                entranceAccessible={entranceAccessible}
+              />
+            )}
         </div>
         {indoorLegType !== IndoorLegType.NoStepsInside &&
         indoorSteps.length > 1 ? (
