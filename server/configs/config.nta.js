@@ -142,7 +142,7 @@ export default {
   },
 
   menu: {
-    copyright: { label: '© NTA' },
+    copyright: { label: '©' },
     content: [
       {
         name: 'menu-feedback',
@@ -170,7 +170,7 @@ export default {
       {
         header: 'About this service',
         paragraphs: [
-          'This is a pilot journey planner for the National Transport Authority (Ireland), built on the open-source Digitransit platform.',
+          'This is a pilot journey planner for Ireland, built on the open-source Digitransit platform.',
           'This service is a modified fork of Digitransit-UI, licensed under the GNU Affero General Public License v3 (or later), also available under the European Union Public Licence v1.2. The complete source code corresponding to this running version is published at <a href="https://github.com/tbibby/digitransit-ui/tree/nta" target="_blank" rel="noreferrer">github.com/tbibby/digitransit-ui</a>.',
         ],
       },
