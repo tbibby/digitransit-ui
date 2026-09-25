@@ -2,7 +2,7 @@ import { createInstance } from 'i18next';
 import translations from './translations';
 
 const i18n = createInstance({
-  fallbackLng: 'fi',
+  fallbackLng: 'en',
   // debug: true,
   resources: translations,
   defaultNS: 'translation',

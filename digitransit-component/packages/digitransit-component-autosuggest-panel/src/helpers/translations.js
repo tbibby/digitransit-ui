@@ -50,6 +50,24 @@ const translations = {
       'viapoint-slack-amount': 'Pysähdyksen kesto',
     },
   },
+  ga: {
+    translation: {
+      'add-via-button-label': 'Cuir pointe idirthurais leis',
+      'add-via-duration-button-label':
+        'Socraigh fad an stad ag pointe idirthurais {{index}}',
+      'add-via-duration-button-label-close':
+        'Dún roghnóir fhad an stad ag pointe idirthurais {{index}}',
+      'add-via-duration-button-label-open':
+        'Oscail roghnóir fhad an stad ag pointe idirthurais {{index}}',
+      'minute-short': 'nóim',
+      'remove-via-button-label': 'Bain pointe idirthurais {{index}}',
+      'swap-order-button-label':
+        'Athraigh áit an phointe tosaigh agus an cheann scríbe',
+      'via-point': 'Pointe idirthurais',
+      'via-point-index': 'Pointe idirthurais {{index}}',
+      'viapoint-slack-amount': 'Fad an stad',
+    },
+  },
   pl: {
     translation: {
       'add-via-button-label': 'Dodaj punkt pośredni',

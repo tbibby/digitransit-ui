@@ -52,6 +52,24 @@ const translations = {
       up: 'Siirrä suosikkisijaintia ylöpäin',
     },
   },
+  ga: {
+    translation: {
+      cancel: 'Cealaigh',
+      'choose-icon': 'Roghnaigh deilbhín na háite',
+      'close-modal': 'Dún an modal',
+      delete: 'Scrios',
+      'delete-place-header': 'Ar mhaith leat an áit a scriosadh?',
+      'delete-place-name': 'Scrios áit: {{favourite.name}}',
+      down: 'Bog an ceanán síos',
+      'edit-modal-on-open': 'Modal chun ceanáin a chur in eagar.',
+      'edit-place-name': 'Cuir áit in eagar: {{favourite.name}}',
+      'edit-places': 'Cuir áiteanna in eagar',
+      'input-placeholder': 'Tabhair ainm don áit (roghnach)',
+      save: 'Sábháil',
+      'save-place': 'Sábháil an áit',
+      up: 'Bog an ceanán suas',
+    },
+  },
   pl: {
     translation: {
       cancel: 'Anuluj',

@@ -56,6 +56,27 @@ const translations = {
       work: 'työ',
     },
   },
+  ga: {
+    translation: {
+      cancel: 'Cealaigh',
+      'cannot-save-place': 'Ní féidir áit a shábháil gan seoladh nó deilbhín',
+      'choose-icon': 'Roghnaigh deilbhín na háite',
+      'close-favourite-modal': 'Dún modal na gceanán',
+      'edit-place': 'Cuir áit in eagar',
+      'favourite-modal-on-add-new': 'Cuir ceanán nua leis',
+      'favourite-modal-on-edit': 'Ag cur in eagar: {{favourite.name}}',
+      home: 'baile',
+      'input-placeholder': 'Tabhair ainm don áit (roghnach)',
+      place: 'áit',
+      'required-text': 'réimse riachtanach',
+      save: 'Sábháil',
+      'save-place': 'Sábháil an áit',
+      school: 'scoil',
+      shopping: 'siopadóireacht',
+      sport: 'spórt',
+      work: 'obair',
+    },
+  },
   pl: {
     translation: {
       cancel: 'Anuluj',

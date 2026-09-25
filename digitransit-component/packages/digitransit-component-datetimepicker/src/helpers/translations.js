@@ -63,6 +63,28 @@ const translations = {
       tomorrow: 'Huomenna',
     },
   },
+  ga: {
+    translation: {
+      'accessible-close': 'Dún an roghnóir',
+      'accessible-closed': 'Roghnóir dúnta',
+      'accessible-open': 'Oscail an roghnóir',
+      'accessible-opened': 'Roghnóir oscailte',
+      'accessible-title': 'Roghnóir dáta agus ama',
+      'accessible-update-instructions':
+        'Cuirfidh athrú ama tús le cuardach nua.',
+      arrival: 'Teacht',
+      cancel: 'Cealaigh',
+      'choose-time': 'Roghnaigh am',
+      date: 'Dáta',
+      departure: 'Imeacht',
+      'departure-now': 'Ag imeacht anois',
+      'invalid-input': 'Tá an t-am a chuir tú isteach neamhbhailí',
+      ready: 'Réidh',
+      time: 'Am',
+      today: 'Inniu',
+      tomorrow: 'Amárach',
+    },
+  },
   pl: {
     translation: {
       'accessible-close': 'Zamknij wybornik',

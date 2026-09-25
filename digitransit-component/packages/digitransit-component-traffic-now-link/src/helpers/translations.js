@@ -15,6 +15,11 @@ const translations = {
       traffic: 'Häiriöt ja muutokset',
     },
   },
+  ga: {
+    translation: {
+      traffic: 'Athruithe agus cur isteach',
+    },
+  },
   pl: {
     translation: {
       traffic: 'Zmiany i zakłócenia',

@@ -40,6 +40,20 @@ const translations = {
       work: 'Työ',
     },
   },
+  ga: {
+    translation: {
+      'add-destination': 'Socraigh mar cheann scríbe',
+      'add-favourite': 'Cuir ceanán leis',
+      'add-home': 'Cuir baile leis',
+      'add-place': 'Cuir áit leis',
+      'add-work': 'Cuir obair leis',
+      edit: 'Cuir in eagar',
+      'favourites-list': 'Liosta ceanán',
+      home: 'Baile',
+      'open-favourites': 'Oscail ceanáin',
+      work: 'Obair',
+    },
+  },
   pl: {
     translation: {
       'add-destination': 'Wybierz jako punkt docelowy',
