@@ -1,0 +1,18 @@
+/* NTA (National Transport Authority, Ireland) theme */
+
+/* Base theme */
+@import '../default/theme';
+
+/* main theme colors — matches config.nta.js's colors.primary */
+$theme-primary-color: #1b3e67;
+$theme-secondary-color: darken($theme-primary-color, 20%);
+$highlight-color: $theme-primary-color;
+$action-color: $theme-primary-color;
+$bus-color: $theme-primary-color;
+$viewpoint-marker-color: $theme-primary-color;
+$current-location-color: $theme-primary-color;
+$standalone-btn-color: $theme-primary-color;
+$link-color: $theme-primary-color;
+$top-bar-color: $theme-primary-color;
+$desktop-title-color: $theme-primary-color;
+$desktop-title-arrow-icon-color: $theme-secondary-color;

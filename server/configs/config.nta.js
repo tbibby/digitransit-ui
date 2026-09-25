@@ -1,5 +1,5 @@
 const CONFIG = 'nta';
-const APP_TITLE = 'NTA Journey Planner';
+const APP_TITLE = 'National Journey Planner';
 const APP_DESCRIPTION =
   'Journey planning pilot for the National Transport Authority (Ireland)';
 
@@ -11,23 +11,37 @@ const OTP_URL = process.env.OTP_URL || 'https://projects.bibby.ie/otp/';
 
 // tiraimsitheoir's Pelias-shaped geocoder (../tiraimsitheoir/) — same
 // base URL already proven working against otp-react-redux
-// (../otp-react-redux/ireland-config.yml). Built here (rather than left to
-// config.default.js's own GEOCODING_BASE_URL handling) so the HSL demo
-// `API_SUBSCRIPTION_TOKEN` query param — baked into config.default.js's
-// PELIAS/PELIAS_REVERSE_GEOCODER/PELIAS_PLACE URLs before this file's
-// `hasAPISubscriptionQueryParameter: false` below can take effect — never
-// gets appended to requests tiraimsitheoir doesn't expect.
+// (../otp-react-redux/ireland-config.yml). Built here as complete URLs
+// (rather than left to config.default.js's own GEOCODING_BASE_URL handling,
+// which bakes in HSL's demo `API_SUBSCRIPTION_TOKEN` query param
+// unconditionally) so tiraimsitheoir — which needs no auth and doesn't
+// expect that param — never receives it, regardless of this file's own
+// `hasAPISubscriptionQueryParameter` (below, `true` for Mapbox's token).
 const GEOCODING_BASE_URL =
   process.env.GEOCODING_BASE_URL ||
   'https://projects.bibby.ie/tiraimsitheoir/pelias/v1';
 
-// Third-party raster tiles (CONTEXT.md's "prerequisites" section) — CARTO's
-// free, no-API-key Positron basemap, same provider already used for
-// otp-react-redux (though there as a MapLibre vector style; digitransit-ui
-// only ever consumes raster PNGs, see RESEARCH.md's "Map tiles" section).
-// Self-hosting (../openfreemap/) is parked until digitransit-ui's own
-// MapLibre migration ships.
-const MAP_URL = process.env.MAP_URL || 'https://basemaps.cartocdn.com';
+// Third-party raster tiles (CONTEXT.md's "prerequisites" section).
+// digitransit-ui only ever consumes raster PNGs (see RESEARCH.md's "Map
+// tiles" section — no MapLibre/vector-tile code path in this codebase).
+// CARTO's anonymous `basemaps.cartocdn.com` (the original pick here) turned
+// out to require an API key after all — it now serves a watermarked
+// "API KEY REQUIRED" tile instead of erroring, which wasn't caught until an
+// actual visual check (2026-09-25). Switched to Mapbox's Styles API
+// (`light-v11`), using the same account/token pattern already proven by
+// `../maptan/` (an `access_token` query param, not a path segment or
+// header) — see `MAP_TOKEN` below.
+const MAP_URL =
+  process.env.MAP_URL ||
+  'https://api.mapbox.com/styles/v1/mapbox/light-v11/tiles';
+
+// Mapbox requires a token on every tile request. Scoped
+// (`https://pleanalaiturais.bibby.ie/*` URL restriction, 2026-09-25) to this
+// domain in the Mapbox dashboard — a token without that restriction, or one
+// scoped to a different domain (e.g. `../maptan/`'s own token), would 403.
+// No hardcoded fallback: this is a credential, not a URL, and must come from
+// `.env` (gitignored, see CONTEXT.md's "Fork setup").
+const { MAP_TOKEN } = process.env;
 
 export default {
   CONFIG,
@@ -36,12 +50,22 @@ export default {
   URL: {
     OTP: OTP_URL,
 
-    // CARTO serves standard 256px tiles (with native `@2x` retina variants,
-    // matching the `{size}` token app/component/map/Map.jsx substitutes) —
-    // not HSL's own 512px hsl-map-server tiles, so `map.tileSize`/
-    // `map.zoomOffset` below are overridden to match.
+    // Mapbox's Styles API serves native 512px tiles (with `@2x` retina
+    // variants, matching the `{size}` token app/component/map/Map.jsx
+    // substitutes) — same as HSL's own hsl-map-server, so `map.tileSize`/
+    // `map.zoomOffset` below match config.default.js's values rather than
+    // needing an override (unlike CARTO's 256px tiles, the original pick
+    // here).
+    //
+    // `getLayerBaseUrl` (utils/client/mapLayerUtils.js) does
+    // `urlOrUrlMap[lang] || urlOrUrlMap.default` — config.default.js's own
+    // `URL.MAP.en` (HSL's tile server) would otherwise win over our
+    // `.default` override here, since configMerger deep-merges per key and
+    // `availableLanguages`/`defaultLanguage` below are both `'en'`. Every
+    // language key we support needs its own override, not just `.default`.
     MAP: {
-      default: `${MAP_URL}/light_all/`,
+      default: `${MAP_URL}/`,
+      en: `${MAP_URL}/`,
     },
 
     // Dropped the `?digitransit-subscription-key=...` query param
@@ -53,9 +77,15 @@ export default {
     PELIAS_PLACE: `${GEOCODING_BASE_URL}/place`,
   },
 
-  // No API subscription — this points at our own OTP/tiraimsitheoir, not
-  // HSL's metered API.
-  hasAPISubscriptionQueryParameter: false,
+  // This is Mapbox's `access_token` query param, not HSL's metered-API
+  // subscription key (PELIAS/PELIAS_REVERSE_GEOCODER/PELIAS_PLACE above are
+  // built as complete URLs and don't go through this mechanism at all, so
+  // turning it on doesn't affect the geocoder). client.jsx and
+  // Disruptions.jsx also read this flag and would append the same query
+  // param to OTP requests — harmless there, OTP ignores unknown params.
+  hasAPISubscriptionQueryParameter: true,
+  API_SUBSCRIPTION_QUERY_PARAMETER_NAME: 'access_token',
+  API_SUBSCRIPTION_TOKEN: MAP_TOKEN,
 
   // Placeholder branding — no NTA logo asset exists yet, so keep this
   // dormant (as config.kela.js does) rather than pointing at a file that
@@ -76,8 +106,11 @@ export default {
   defaultMapZoom: 7,
 
   map: {
-    tileSize: 256,
-    zoomOffset: 0,
+    // Matches config.default.js's own values — Mapbox's tiles are native
+    // 512px, same as HSL's hsl-map-server, so no override needed (unlike
+    // CARTO's 256px tiles, the original pick here).
+    tileSize: 512,
+    zoomOffset: -1,
     areaBounds: {
       // Ireland + Northern Ireland, same bbox already proven against
       // tiraimsitheoir via ../otp-react-redux/ireland-config.yml.
@@ -85,7 +118,7 @@ export default {
       corner2: [51.3, -5.9],
     },
     attribution:
-      '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a>',
+      '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors &copy; <a href="https://www.mapbox.com/about/maps/" target="_blank">Mapbox</a>',
   },
 
   mainMenu: {
