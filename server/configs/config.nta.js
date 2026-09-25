@@ -1,7 +1,7 @@
 const CONFIG = 'nta';
 const APP_TITLE = 'National Journey Planner';
 const APP_DESCRIPTION =
-  'Journey planning pilot for the National Transport Authority (Ireland)';
+  'This is a pilot journey planner for Ireland, built on the open-source Digitransit platform.';
 
 // Our own OTP instance (see ../otp/OTP-FRONTEND.md — same host, same
 // `/otp` Apache ProxyPass otp-react-redux already uses). `config.URL.OTP`
