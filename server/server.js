@@ -162,7 +162,7 @@ function setUpErrorHandling() {
 
 function setUpRoutes() {
   app.use(
-    ['/', '/fi/', '/en/', '/sv/', '/ru/', '/slangi/'],
+    ['/', ...config.availableLanguages.map(lang => `/${lang}/`), '/slangi/'],
     reittiopasParameterMiddleware,
   );
   app.use(serve);

@@ -106,6 +106,17 @@ export default {
   availableLanguages: ['en', 'ga'],
   defaultLanguage: 'en',
 
+  // Without this, LangSelect.jsx's /<lang>/... links do nothing:
+  // reittiopasParameterMiddleware.js only strips the language URL prefix and
+  // sets the `lang` cookie when this is true (opt-in per config — only
+  // config.hsl.js/matka.js/kela.js/waltti.js set it; config.default.js
+  // doesn't either). Without it, a request to e.g. /ga/ falls straight
+  // through to the app/client/routes.jsx itinerary catch-all route, binding
+  // "ga" as the origin (:from) route param instead of switching language —
+  // found 2026-09-25 when the language switcher's Irish option populated the
+  // origin field with the literal text "ga".
+  redirectReittiopasParams: true,
+
   defaultEndpoint: {
     address: 'Dublin',
     lat: 53.3498,
