@@ -1,0 +1,977 @@
+/* eslint sort-keys: "error" */
+export default {
+  ga: {
+    'about-service-feedback': 'Maidir leis an tseirbhís agus aiseolas',
+    'about-these-pages': 'Maidir leis na leathanaigh ghréasáin',
+    'about-this-service': 'Maidir leis an tseirbhís',
+    access_with: 'rochtain le',
+    accessibility: 'Inrochtaineacht',
+    'accessibility-limited': 'Cathaoir rothaí',
+    'accessibility-nolimit': 'Gan teorainn',
+    'accessibility-statement': 'Ráiteas inrochtaineachta',
+    'accessible-car-places': 'Inrochtana do chathaoireacha rothaí',
+    acknowledged: 'OK',
+    'add-favourite-bikeStation-failed-heading':
+      'Theip ar shábháil an stáisiúin rothar cathrach',
+    'add-favourite-personalization-failed-heading':
+      'Theip ar shábháil do shocruithe pearsantaithe',
+    'add-favourite-place-failed-heading': 'Ní féidir an suíomh a shábháil',
+    'add-favourite-route-failed-heading': 'Theip ar shábháil an bhealaigh',
+    'add-favourite-station-failed-heading': 'Theip ar shábháil an stáisiúin.',
+    'add-favourite-stop-failed-heading': 'Theip ar shábháil an stad',
+    'add-home': 'Cuir baile leis',
+    'add-itinerary-via-point': 'Cuir pointe idirthurais leis an turas',
+    'add-location-to-favourites': 'Cuir suíomh tábhachtach le do Cheanáin',
+    'add-to-favourites': 'Cuir le do Cheanáin',
+    'add-via-button-label': 'Cuir pointe idirthurais leis',
+    'add-via-duration-button-label':
+      'Socraigh fad an stad ag pointe idirthurais {index}',
+    'add-via-duration-button-label-close':
+      'Dún roghnóir fhad an stad ag pointe idirthurais {index}',
+    'add-via-duration-button-label-open':
+      'Oscail roghnóir fhad an stad ag pointe idirthurais {index}',
+    'add-work': 'Cuir obair leis',
+    address: 'Seoladh',
+    'address-or-stop': 'Seoladh nó stad',
+    agency: 'Oibreoir',
+    airplane: 'Eitilt',
+    'airport-check-in':
+      'Seiceáil isteach a luaithe a shroicheann tú an t-aerfort mura bhfuil sé déanta agat roimh ré',
+    'airport-collect-luggage': 'Bailigh do bhagáiste',
+    'airport-security-check-go-to-gate':
+      'Téigh tríd an seiceáil slándála go dtí do gheata',
+    all: 'Uile',
+    'all-routes': 'Gach bealach',
+    'all-routes-disabled': 'Gan bhealaí',
+    'alternative-legs':
+      'Freisin {leg1} ag {startTime1} agus {leg2} ag {startTime2}',
+    'alternative-legs-single': 'Freisin {leg1} ag {startTime1}',
+    'alternative-name-rail': 'Traein cheantair',
+    'aria-itinerary-summary':
+      'Am iomlán an turais {duration}. Ag imeacht {inFuture} {departureTime} agus ag teacht isteach ag {arrivalTime}',
+    'aria-itinerary-summary-bike-distance':
+      'Rothaíocht iomlán {duration}, {distance} ',
+    'aria-itinerary-summary-car-distance':
+      'Tiomáint iomlán {duration}, {distance} ',
+    'aria-itinerary-summary-walk-distance':
+      'Siúl iomlán {duration}, {distance} ',
+    'arriving-at': 'Ag teacht isteach',
+    'arriving-soon': 'Anois',
+    'as-destination': 'Ceann scríbe',
+    'as-origin': 'Pointe tosaigh',
+    'as-viapoint': 'Pointe idirthurais',
+    'at-time': 'ag',
+    'avoid-transfers': 'Seachain aistrithe',
+    'avoid-walking': 'Seachain siúl',
+    back: 'Ar ais',
+    'back-button-title': 'Téigh ar ais go dtí an leathanach roimhe seo',
+    'back-to-front-page': 'Ar ais go dtí an leathanach baile',
+    bicycle: 'Rothar',
+    'bicycle-walk-from-transit':
+      'Bain do rothar den {transportMode} agus siúil leis ar feadh {distance} ({duration})',
+    'bicycle-walk-from-transit-no-duration':
+      'Siúil do rothar den {transportMode}',
+    'bicycle-walk-to-transit':
+      'Siúil do rothar ar feadh {distance} ({duration}) agus tóg leat é ar an {transportMode}',
+    'bicycle-walk-to-transit-no-duration':
+      'Siúil do rothar go dtí an {transportMode}',
+    bicycle_frame_lock: 'Glas fráma',
+    bicycle_walk: 'Rothar á shiúl',
+    'bike-availability': 'Rothair ar fáil ag an stáisiún faoi láthair',
+    'bike-only': 'Rothaíocht amháin',
+    'bike-park': 'Páirceáil agus Taisteal do rothair',
+    'bike-park-disclaimer':
+      'Is féidir leat do rothar a pháirceáil in aice leis an stáisiún nó an stad agus do thuras a leanúint ar iompar poiblí',
+    'bike-park-disclaimer-header': 'Páirceáil do rothar',
+    'bike-station-disabled': 'Tá an stáisiún rothar as seirbhís.',
+    'biking-speed': 'Luas rothaíochta',
+    'book-a-lift': 'Úsáid tacsaithe tríd an aip',
+    'booking-method': 'Modh cur in áirithe',
+    bus: 'Bus',
+    'bus-express': 'Príomhbhus',
+    'bus-local': 'Bus áitiúil',
+    'buy-in-app': 'Ceannaigh san Aip',
+    call: 'Iompar ar éileamh',
+    'call-agency-disclaimer':
+      'Feidhmíonn an tseirbhís seo trí chur in áirithe roimh ré. Le do thuras a chinntiú, déan cur in áirithe in am. Tá tuilleadh eolais ar fáil ón soláthraí seirbhíse. ',
+    'call-number': 'Glaoigh ar {number}',
+    cancel: 'Cealaigh',
+    canceled: 'Curtha ar ceal',
+    'capacity-modal.crushed-standing-room-only':
+      'Spás seasaimh teoranta amháin ar fáil',
+    'capacity-modal.few-seats-available': 'Roinnt suíochán ar fáil',
+    'capacity-modal.heading': 'An bhfuil spás ar bord?',
+    'capacity-modal.legend': 'Eochair do na siombailí',
+    'capacity-modal.many-seats-available': 'Neart suíochán ar fáil',
+    'capacity-modal.standing-room-only':
+      'Cúpla suíochán agus spás seasaimh teoranta amháin ar fáil',
+    'capacity-modal.subheading':
+      'Tá meastachán acmhainne fíor-ama ar fáil do roinnt feithiclí',
+    car: 'Carr',
+    'car-distance-duration': 'Tiomáin {duration} ({distance})',
+    'car-distance-no-duration': 'Tiomáin {distance}',
+    'car-drive-from-transit-no-duration': 'Tiomáin do charr ón {transportMode}',
+    'car-drive-to-transit-no-duration':
+      'Tiomáin do charr go dtí an {transportMode}',
+    'car-park': 'Páirceáil agus Taisteal',
+    'car-park-disclaimer':
+      'Is féidir leat do charr a pháirceáil in aice le stáisiún nó stad agus do thuras a leanúint ar iompar poiblí',
+    'car-park-disclaimer-header': 'Páirceáil do charr',
+    choose: 'Roghnaigh',
+    'choose-freely': 'Roghnach',
+    'choose-stop': 'Roghnaigh stad',
+    'choose-stop-or-vehicle': 'Roghnaigh bealach nó stad',
+    'choose-vehicle': 'Roghnaigh bealach',
+    citybike: 'Rothar cathrach',
+    'citybike-duration-general-header':
+      'Baineann táille bhreise le roinnt codanna den bhealach atá le déanamh ar rothar cathrach.',
+    'citybike-duration-info':
+      'Is féidir leat rothar cathrach a úsáid ar feadh suas le {duration} nóiméad ag an am, agus ina dhiaidh sin gearrfar táille bhreise ort.',
+    'citybike-duration-info-header':
+      'Tógann an chuid den bhealach atá le déanamh ar rothar cathrach níos mó ná {duration} nóiméad.',
+    'citybike-duration-info-short':
+      'Tógann cuid den bhealach níos mó ná {duration} nóim. Baineann táille bhreise leis.',
+    'citybike-network-headers': 'Rothair Chathrach',
+    'citybike-purchase-link': 'Ceannaigh',
+    'citybike-return-full': 'Ag cur rothar cathrach ar ais?',
+    'citybike-return-full-link':
+      'Conas rothar a chur ar ais nuair atá stáisiún rothar lán ›',
+    'citybike-start-using': 'Tosaigh ag úsáid rothair chathrach',
+    'citybike-start-using-info': 'Tuilleadh eolais',
+    'citybike-station': 'Stáisiún rothar {stationId}',
+    'citybike-station-no-id': 'Stáisiún rothar',
+    'clear-button-label': 'Glan',
+    close: 'Dún',
+    'close-settings': 'Dún an fhuinneog agus sábháil na socruithe',
+    continue: 'Lean ar aghaidh',
+    'cookie-settings': 'Socruithe fianán',
+    'copy-code': 'Cóipeáil an cód',
+    covered: 'Foscadh',
+    'create-embedded-search': 'Cruthaigh eilimint cuardaigh bealaigh',
+    'create-stop-monitor': 'Cruthaigh scáileán stad',
+    'crushed-standing-room-only': 'Spás seasaimh plódaithe amháin',
+    'cycle-distance-duration': 'Rothaigh {duration} ({distance})',
+    'cyclewalk-distance-duration': 'Siúil do rothar {duration} ({distance})',
+    date: 'Dáta',
+    day: 'Lá',
+    delete: 'Scrios',
+    'delete-favourite-failed-heading': 'Ní féidir an ceanán a scriosadh',
+    'demand-responsive-traffic': 'Iompar ar éileamh',
+    'departure-list-update.sr-instructions':
+      'Nuashonrófar liosta na n-imeachtaí atá le teacht agus na n-amanna imeachta i bhfíor-am.',
+    'departure-page-sr':
+      'Bealach {shortName} {destination}, ag imeacht ag {time},',
+    'departure-time-in-minutes': '{minutes} nóim',
+    'departure-time-sr': '{when} a chlog {time}, {realTime}',
+    'departures-by-hour': 'Imeachtaí de réir uaire',
+    'departures-by-hour-minutes-route': '(nóiméad/bealach)',
+    'departures-not-found':
+      'Ar an drochuair, níor aimsíodh aon chlár ama don stad a roghnaigh tú',
+    'departures-not-found-time-threshold':
+      'Ar an drochuair, níor aimsíodh aon chlár ama don stad a roghnaigh tú. Seans go bhfuil an lá a chuardaigh tú rófhada san am atá le teacht. Bain triail eile as níos gaire d’am do thurais',
+    destination: 'Ceann scríbe',
+    'destination-defined': 'Ceann scríbe socraithe',
+    'destination-outside-service':
+      'Níor aimsíodh aon mholtaí bealaigh toisc go bhfuil an ceann scríbe lasmuigh de limistéar na seirbhíse.',
+    disclaimer:
+      'Tabhair faoi deara go bhfuil na torthaí bunaithe ar amanna taistil measta. Ní féidir na naisc iompair a mholtar a ráthú.',
+    disruption: 'Cur isteach',
+    'disruption-badge-additional_service': 'Bealaí breise',
+    'disruption-badge-cancellation': 'Curtha ar ceal',
+    'disruption-badge-detour': 'Atreorú',
+    'disruption-badge-modified_service': 'Modhnuithe seirbhíse',
+    'disruption-badge-no_effect': 'Gan éifeacht',
+    'disruption-badge-no_service': 'Gan seirbhís',
+    'disruption-badge-other_effect': 'Eile',
+    'disruption-badge-reduced_service': 'Bealaí laghdaithe',
+    'disruption-badge-significant_delays': 'Moill',
+    'disruption-badge-stop_moved': 'Stad aistrithe',
+    'disruption-badge-unknown_effect': 'Anaithnid',
+    'disruption-info': 'Eolas faoi chur isteach',
+    'disruption-info-no-alerts': 'Níl aon chur isteach ná atreorú ar eolas.',
+    'disruption-info-route-no-alerts':
+      'Níl aon chur isteach ná atreorú ar eolas don bhealach.',
+    'disruption-list-active': 'Ar siúl',
+    'disruption-list-no-active-alerts': 'Níl aon chur isteach reatha ar eolas',
+    'disruption-list-no-upcoming-alerts':
+      'Níl aon chur isteach ná atreorú atá le teacht ar eolas',
+    'disruption-list-traffic-normal': 'Seirbhísí gnáthúla',
+    'disruption-list-upcoming': 'Atá le teacht',
+    'disruption-view-details': 'Féach ar shonraí',
+    'disruption-view-timetable': 'Féach ar chlár ama',
+    disruptions: 'Cur isteach',
+    'disruptions-and-diversions': 'Cur isteach agus atreoruithe',
+    'disruptions-change-filters': 'Bain triail eile as le scagairí eile',
+    'disruptions-found-amount':
+      '{amount, plural, =0 {Níor aimsíodh aon chur isteach} one {Aimsíodh cur isteach amháin} two {Aimsíodh {amount} chur isteach} few {Aimsíodh {amount} chur isteach} many {Aimsíodh {amount} gcur isteach} other {Aimsíodh {amount} cur isteach} }',
+    'disruptions-refresh': 'Luchtaigh an leathanach',
+    'disruptions-tab.sr-disruptions': 'Cur isteach amháin nó níos mó ar eolas',
+    'disruptions-tab.sr-no-disruptions': 'Gan cur isteach ar eolas',
+    'disruptions-update-available': 'Nuashonruithe ar fáil',
+    'distance-total': 'Fad iomlán',
+    'e-scooter': 'Scútar leictreach',
+    'e-scooter-alternative':
+      'Cad faoi scútar leictreach a úsáid do chuid den turas? {paymentInfo}',
+    'e-scooter-or-taxi-alternative':
+      'Cad faoi chuid den turas a dhéanamh ar scútar leictreach, ar thacsaí nó ar sheirbhís tugtha marcaíochta? {paymentInfo}',
+    'e-scooters': 'Scútair leictreacha',
+    'e-scooters-available':
+      'Tá scútair leictreacha ar fáil sa cheantar. Úsáid aip chun an scútar leictreach a dhíghlasáil.',
+    earlier: 'Imeachtaí níos luaithe',
+    'embedded-search.choose-language': 'Teanga',
+    'embedded-search.choose-mode': 'Modh taistil',
+    'embedded-search.choose-width-component': 'Leithead an leabaithe ',
+    'embedded-search.form-heading': 'Uirlisí leabaithe',
+    engine_ignition_aid: 'Cúnamh dúisithe inneall',
+    english: 'Béarla',
+    estimate: 'Meastachán',
+    explanations: 'Mínithe',
+    'extra-info': 'Tuilleadh eolais',
+    'favourite-failed-text': 'Bain triail eile as i gceann tamaill.',
+    ferry: 'Bád fartha',
+    'ferry-external': 'Bád fartha',
+    filter: 'Scag',
+    filters: 'Scagairí',
+    finnish: 'Fionlainnis',
+    'free-of-charge': 'Saor in aisce',
+    'from-bus': 'ón mbus',
+    'from-ferry': 'ón mbád fartha',
+    'from-ferrypier': 'ón gcéibh farantóireachta',
+    'from-rail': 'ón traein',
+    'from-scooter-location': 'suíomh an scútair',
+    'from-station': 'ón stáisiún',
+    'from-stop': 'ón stad',
+    'from-subway': 'ón meitreo',
+    'from-tram': 'ón tram',
+    frontpage: 'Leathanach baile',
+    funicular: 'Traein chábla',
+    'generic-cancelation':
+      'Tá {mode} {route} {headsign} curtha ar ceal ag {times}',
+    'generic-error': 'Tharla earráid',
+    'geolocation-denied-heading': 'Diúltaíodh don suíomhaireacht',
+    'geolocation-denied-text':
+      'Níor thug tú cead an suíomhaireacht a úsáid. Is féidir leat é a cheadú ó shocruithe an fhóin nó an bhrabhsálaí.',
+    'geolocation-failed-heading': 'Theip ar an suíomhaireacht',
+    'geolocation-failed-text':
+      'Ní thacaíonn do bhrabhsálaí le haisghabháil suímh.',
+    'geolocation-prompt-text':
+      'Glac le hiarratas an bhrabhsálaí rochtain a fháil ar do shuíomh.',
+    'geolocation-timeout-heading':
+      'Tá sé ag tógáil níos faide ná mar a bhíothas ag súil leis do shuíomh a aimsiú.',
+    'geolocation-timeout-text':
+      'Ar ghlac tú le hiarratas an bhrabhsálaí rochtain a fháil ar do shuíomh?',
+    'get-off-the-ride': 'Tuirling',
+    hour: 'Uair',
+    hsl_ticket: 'Ticéad HSL',
+    hsl_travel_card: 'Cárta HSL',
+    'include-estonia': 'Cuir an Eastóin san áireamh',
+    'index.title': 'Pleanálaí Turais',
+    'indoor-step-message-elevator': 'Ardaitheoir',
+    'indoor-step-message-elevator-to-floor':
+      'Ardaitheoir go dtí urlár {toLevelName}',
+    'indoor-step-message-escalator': 'Staighre beo',
+    'indoor-step-message-escalator-down': 'Staighre beo síos',
+    'indoor-step-message-escalator-up': 'Staighre beo suas',
+    'indoor-step-message-stairs': 'Staighre',
+    'indoor-step-message-stairs-down': 'Staighre síos',
+    'indoor-step-message-stairs-up': 'Staighre suas',
+    'is-open': 'Oscailte',
+    'itinerary-co2.description':
+      'Ginfear {co2value} g d’astaíochtaí CO₂ ar an turas seo. Ghinfeadh carr {carCo2Value} g de CO₂ ar an turas céanna.',
+    'itinerary-co2.description-simple':
+      'Ginfear {co2value} g d’astaíochtaí CO₂ ar an turas seo.',
+    'itinerary-co2.description-simple-sr':
+      'Ginfear {co2value} g d’astaíochtaí dé-ocsaíd charbóin ar an turas seo.',
+    'itinerary-co2.description-sr':
+      'Ginfear {co2value} g d’astaíochtaí dé-ocsaíd charbóin ar an turas seo. Ghinfeadh carr {carCo2Value} g de dhé-ocsaíd charbóin ar an turas céanna.',
+    'itinerary-co2.link': 'Conas a ríomhtar astaíochtaí ›',
+    'itinerary-co2.title': 'Astaíochtaí CO₂ an turais',
+    'itinerary-co2.title-sr': 'Astaíochtaí dé-ocsaíd charbóin an turais',
+    'itinerary-details.biking-leg':
+      'Ag {time} rothaigh {distance} ó {origin} go {to} {destination}. Am measta {duration}',
+    'itinerary-details.car-leg':
+      'Ag {time} tiomáin {distance} ó {origin} go {to} {destination}. Am measta {duration}',
+    'itinerary-details.end-leg':
+      'Ag {time} sroich an ceann scríbe {destination}.',
+    'itinerary-details.route-has-info-alert': 'Tá fógraí ar an mbealach.',
+    'itinerary-details.route-has-severe-alert':
+      'Tá cur isteach ar an mbealach.',
+    'itinerary-details.route-has-unknown-alert':
+      'Tá cur isteach ar an mbealach.',
+    'itinerary-details.route-has-warning-alert':
+      'Tá cur isteach ar an mbealach.',
+    'itinerary-details.scooter-leg':
+      'Ag {time} taistil ar scútar {distance} ón láthair bailithe {origin} go {destination}. Am measta {duration}',
+    'itinerary-details.taxi-leg':
+      'Ag {time} taistil ar thacsaí {distance} ón láthair bailithe {origin} go {to} {destination}. Am measta {duration}',
+    'itinerary-details.transit-leg-part-1': 'Ag {time} {realtime} tóg',
+    'itinerary-details.transit-leg-part-2':
+      'ón stad {startStop} {startZoneInfo} {trackInfo} go dtí an stad {endStop} {endZoneInfo}. Fad measta {duration}. ',
+    'itinerary-details.via-leg':
+      'Sroicheann {arrivalTime} an pointe idirthurais {viaPoint}. {leaveAction}',
+    'itinerary-details.walk-leg':
+      'Ag {time} siúil {distance} ó {origin} go {to} {destination}. Am measta {duration}',
+    'itinerary-hide-alternative-legs': 'Folaigh na roghanna eile',
+    'itinerary-hide-indoor-route': 'Folaigh an bealach laistigh',
+    'itinerary-hide-stops': 'Folaigh na stadanna',
+    'itinerary-in-the-past':
+      'Titeann an cuardach bealaigh laistigh de thréimhse atá san am a chuaigh thart.',
+    'itinerary-in-the-past-link': 'Imigh anois ›',
+    'itinerary-in-the-past-title':
+      'Ní féidir na roghanna bealaigh a thaispeáint',
+    'itinerary-indoor-route': 'Bealach laistigh',
+    'itinerary-page.itineraries-loaded': 'Torthaí cuardaigh luchtaithe',
+    'itinerary-page.loading-itineraries': 'Ag luchtú thorthaí an chuardaigh',
+    'itinerary-page.show-details': 'Taispeáin sonraí an turais',
+    'itinerary-page.show-details-label': 'Taispeáin sonraí turais {number}',
+    'itinerary-page.title': 'Turas',
+    'itinerary-summary-page.description': 'Moltaí bealaigh',
+    'itinerary-summary-row.call-agency-description':
+      'Seirbhís ar éileamh; féach an turas le haghaidh sonraí.',
+    'itinerary-summary-row.clickable-area-description':
+      'Taispeáin ar an léarscáil',
+    'itinerary-summary-row.description':
+      'Turas ag imeacht ag {departureDate} {departureTime} agus ag teacht isteach ag {arrivalDate} {arrivalTime}. {firstDeparture} {transfers} Am iomlán {totalTime}.',
+    'itinerary-summary-row.first-leg-start-time':
+      'Ag imeacht ag {firstDepartureTime} ó {firstDepartureStopType} {firstDepartureStop}{firstDeparturePlatform}',
+    'itinerary-summary-row.first-leg-start-time-citybike':
+      'Ag imeacht ag {firstDepartureTime} ó stáisiún rothar {firstDepartureStop}',
+    'itinerary-summary-row.first-leg-start-time-scooter':
+      'Ag imeacht ag {firstDepartureTime} ón láthair bailithe scútair',
+    'itinerary-summary-row.first-leg-start-time-sr':
+      'Imíonn {vehicle} ag {firstDepartureTime} ó {firstDepartureStopType} {firstDepartureStop} {firstDeparturePlatform}.',
+    'itinerary-summary-row.first-leg-start-time-taxi':
+      'Ag imeacht ag {firstDepartureTime} ón láthair bailithe tacsaí',
+    'itinerary-summary-row.no-transit-legs': 'Imigh nuair is fearr leat',
+    'itinerary-summary-row.transfers':
+      'Aistrigh go {vehicle} ag stad {stopName}',
+    'itinerary-summary-row.transfers-to-rental': 'Aistrigh go {vehicle}',
+    'itinerary-summary.bike-boarding-information':
+      'Tá cead agat do rothar a thabhairt ar bord na feithicle. Deimhnigh leis an oibreoir iompair an mbíonn táille ag baint le rothar a iompar.',
+    'itinerary-summary.bikeAndPublic-bus-title':
+      'Tabhair do rothar leat ar an mbus',
+    'itinerary-summary.bikeAndPublic-ferry-title':
+      'Tabhair do rothar leat ar an mbád fartha',
+    'itinerary-summary.bikeAndPublic-rail-title':
+      'Tabhair do rothar leat ar an traein',
+    'itinerary-summary.bikeAndPublic-subway-title':
+      'Tabhair do rothar leat ar an meitreo',
+    'itinerary-summary.bikeAndPublic-tram-title':
+      'Tabhair do rothar leat ar an tram',
+    'itinerary-summary.bikePark-title':
+      'Fág do rothar ag Páirceáil agus Taisteal',
+    'itinerary-summary.car-boarding-information':
+      'Is féidir do charr a thabhairt ar bord. Deimhnigh leis an oibreoir iompair an mbíonn táille bhreise ann as carranna a iompar.',
+    'itinerary-summary.carAndPublic-ferry-title':
+      'Tiomáin do charr ar an mbád fartha',
+    'itinerary-summary.carAndPublic-rail-title':
+      'Tiomáin do charr ar an traein',
+    'itinerary-summary.interline-wait':
+      'Athróidh uimhir an bhealaigh ({shortName}) agus an ceann scríbe ({destination}) ag stad {stop}. Am feithimh ag an stad {time}. Fan ar bord, le do thoil.',
+    'itinerary-summary.interline-wait-multiple-legs':
+      'Athróidh uimhir an bhealaigh ({shortName}) agus an ceann scríbe cúpla uair le linn an turais. Am feithimh iomlán {time}. Ná fág an fheithicil, le do thoil.',
+    'itinerary-summary.interline-wait-multiple-legs-same-route':
+      'Athróidh an ceann scríbe cúpla uair le linn an turais. Am feithimh iomlán {time}. Ná fág an fheithicil, le do thoil.',
+    'itinerary-summary.interline-wait-same-route':
+      'Athróidh an ceann scríbe ({destination}) ag stad {stop}. Am feithimh ag an stad {time}. Fan ar bord, le do thoil.',
+    'itinerary-summary.show-on-map': 'Taispeáin ar an léarscáil {target}',
+    'itinerary-ticket.title': 'Ticéad riachtanach',
+    'itinerary-tickets.title': 'Ticéid riachtanacha',
+    'journey-planner-manual': 'Lámhleabhar an phleanálaí turais',
+    'language-selection': 'Teanga: {language}',
+    later: 'Imeachtaí níos déanaí',
+    'leave-your-car-park-and-ride':
+      'Fág do charr ag láthair Páirceáil agus Taisteal',
+    leaves: 'Ag imeacht',
+    'leaving-at': 'Ag imeacht ag',
+    lighting: 'Soilsiú',
+    loading: 'Á luchtú...',
+    'location-from-map': 'Suíomh roghnaithe',
+    'location-from-map-confirm': 'Deimhnigh an roghnú',
+    'location-home': 'Baile',
+    'location-work': 'Obair',
+    login: 'Logáil isteach',
+    'login-content':
+      'Chun áiteanna, bealaí agus stadanna a shábháil agus a úsáid, ní mór duit logáil isteach le do chuntas HSL.',
+    'login-header': 'Logáil isteach ar dtús',
+    logout: 'Logáil amach',
+    'main-menu-label-close': 'Dún an príomhroghchlár',
+    'main-menu-label-open': 'Oscail an príomhroghchlár',
+    'map-layer-citybike': 'Stáisiúin rothar cathrach',
+    'map-layer-park-and-ride': 'Láithreacha Páirceáil agus Taisteal',
+    'map-layer-park-and-ride-bike':
+      'Páirceáil rothar don Pháirceáil agus Taisteal',
+    'map-layer-scooter': 'Scútair',
+    'map-layer-stop-airplane': 'Aerfoirt',
+    'map-layer-stop-bus': 'Stadanna bus',
+    'map-layer-stop-ferry': 'Báid fharantóireachta',
+    'map-layer-stop-funicular': 'Traenacha cábla',
+    'map-layer-stop-tram': 'Stadanna tram',
+    'map-layer-vehicles': 'Feithiclí',
+    'map-zoom-in-button': 'Zúmáil isteach',
+    'map-zoom-out-button': 'Zúmáil amach',
+    maplayers: 'Sraitheanna léarscáile',
+    'menu-feedback': 'Cuir aiseolas isteach',
+    'messagebar-label-close-message-bar': 'Dún an banóg',
+    'min-transfer-time': 'Am idirmhalartaithe',
+    'minutes-or-route': 'Nóim / Bealach',
+    'mobile-ticket-purchase-aria':
+      'Eolas ceannaigh ticéad soghluaiste. Ceannaigh {ticketName} ar {price}. Ceannaigh ticéad ó aip HSL nó íoslódáil an aip',
+    'modes.from-place': 'ón gceann scríbe',
+    'modes.to-airplane': 'aerfort',
+    'modes.to-bike': 'stáisiún rothar cathrach',
+    'modes.to-bike-park': 'páirceáil rothar',
+    'modes.to-bus': 'stad bus',
+    'modes.to-car-park': 'páirceáil carranna',
+    'modes.to-ferry': 'céibh farantóireachta',
+    'modes.to-place': 'ceann scríbe',
+    'modes.to-rail': 'stáisiún traenach',
+    'modes.to-scooter': 'go dtí an scútar',
+    'modes.to-stop': 'stad',
+    'modes.to-subway': 'stáisiún meitreo',
+    'modes.to-taxi': ' ',
+    'modes.to-tram': 'stad tram',
+    'more-departures': 'Tuilleadh imeachtaí',
+    'move-on-map': 'Bog ar an léarscáil',
+    'navi-change-info': 'Cuirfear ar an eolas tú faoi aon athruithe',
+    'navi-geolocation-approval':
+      'Do thoiliú le seirbhísí suímh agus an tseirbhís á húsáid',
+    'navi-geolocation-details':
+      'Nuair a thosaíonn an treoraíocht, seans go n-iarrfaidh an tseirbhís cead uait do shuíomh a úsáid. Is féidir leat an cead a athrú i socruithe do ghléis agus do bhrabhsálaí am ar bith.',
+    'navi-geolocation-purpose':
+      'Cumasaigh seirbhísí suímh ar do ghléas don tacaíocht is fearr do do thuras.',
+    'navi-more-guidance': 'Treoraíocht níos fearr do do thuras!',
+    'navi-support': 'Gheobhaidh tú cúnamh ar do bhealach',
+    'navigation-abort-trip':
+      'Ar an drochuair, ní féidir do thuras a leanúint mar a beartaíodh.',
+    'navigation-description': 'Tabharfaimid ann thú',
+    'navigation-get-mode': 'Téigh ar bord {mode}',
+    'navigation-hurry-transfer': 'Tá an t-am aistrithe athraithe',
+    'navigation-hurry-transfer-solved': 'Am aistrithe ar ais go leordhóthanach',
+    'navigation-hurry-transfer-solved-details':
+      'Is é {time} an t-am aistrithe {transfer}',
+    'navigation-hurry-transfer-value':
+      'Is é {time} an t-am aistrithe nua {transfer}. Athrú ar an sceideal {change} nóim.',
+    'navigation-interline-resume':
+      'Leanfaidh do thuras ar aghaidh i gceann {duration} nóiméad',
+    'navigation-interline-wait':
+      'Athróidh uimhir an bhealaigh {line} agus an ceann scríbe {destination} ag an stad',
+    'navigation-interline-wait-same-route':
+      'Athróidh an ceann scríbe {destination} ag an stad',
+    'navigation-intro-begin': 'Tosaigh an turas',
+    'navigation-intro-help-body': 'Taistil céim ar chéim',
+    'navigation-intro-notifications-body': 'Fan ar an eolas faoi do thuras',
+    'navigation-journey-start': 'Tosóidh do thuras ag',
+    'navigation-journey-start-early-prompt': 'Nach dteastaíonn uait fanacht?',
+    'navigation-mode-canceled': 'Tá {name} curtha ar ceal',
+    'navigation-mode-early': 'Tá {name} chun tosaigh ar an sceideal',
+    'navigation-mode-late': 'Tá {name} mall',
+    'navigation-outro-dismiss': 'Deireadh leis an treoraíocht',
+    'navigation-outro-header': 'Tá tú sroichte!',
+    'navigation-pier-change': 'Céibh athraithe',
+    'navigation-pier-change-details': 'Imíonn {name} ó chéibh {number}',
+    'navigation-pier-restored': 'Ag imeacht ón gcéibh bhunaidh',
+    'navigation-platform-change': 'Ardán athraithe',
+    'navigation-platform-change-details': 'Imíonn {name} ó ardán {number}',
+    'navigation-platform-restored': 'Ag imeacht ón ardán bunaidh',
+    'navigation-quit': 'Téigh ar ais',
+    'navigation-remember-ticket': 'Ar chuimhnigh tú ticéad a cheannach?',
+    'navigation-ticket': 'Ticéad',
+    'navigation-track-change': 'Raon athraithe',
+    'navigation-track-change-details': 'Imíonn {name} ó raon {number}',
+    'navigation-track-restored': 'Ag imeacht ón raon bunaidh',
+    'navigation-transfer-problem':
+      'Ní féidir an t-aistriú a dhéanamh a thuilleadh',
+    'navigation-transfer-problem-details':
+      'Tá an t-am aistrithe {transfer} ró-ghearr.',
+    'navileg-at-ferrypier': 'ag an gcéibh farantóireachta',
+    'navileg-at-station': 'ag an stáisiún',
+    'navileg-at-stop': 'ag an stad',
+    'navileg-bicycle': 'Rothaigh',
+    'navileg-car': 'Tiomáin',
+    'navileg-departing-at': 'i gceann {duration} ag {legTime}',
+    'navileg-hop-on': 'agus téigh ar bord',
+    'navileg-in-transit': 'turas {mode}',
+    'navileg-in-transit-interline':
+      'Athróidh uimhir an bhealaigh agus an ceann scríbe ag {stop} {stopOrStation} i gceann {duration} ag {legTime}. Fan ar bord.',
+    'navileg-in-transit-interline-same-route':
+      'Athróidh an ceann scríbe ag {stop} {stopOrStation} i gceann {duration} ag {legTime}. Fan ar bord.',
+    'navileg-intermediate-stops': '{stopCount} stad eatramhach',
+    'navileg-leave-at':
+      'Tuirling ag {stop} {stopOrStation} i gceann {duration} ag {legTime}',
+    'navileg-mode-citybike':
+      '{available} rothar cathrach ar fáil ag an stáisiún',
+    'navileg-mode-realtime': 'Tá {mode} {route} ar sceideal',
+    'navileg-mode-schedule': 'Níl eolas seirbhíse cothrom le dáta ar fáil',
+    'navileg-one-intermediate-stop': '{stopCount} stad eatramhach',
+    'navileg-rent-cycle': 'Bailigh rothar cathrach',
+    'navileg-rent-scooter': 'Bailigh scútar leictreach',
+    'navileg-scooter': 'Scútáil',
+    'navileg-start-realtime':
+      'Ag imeacht ag {time} ó {stopName} {stopOrStation}',
+    'navileg-start-schedule': 'Imeacht sceidealta {mode} {route} ag {time}',
+    'navileg-walk': 'Siúil go dtí',
+    'near-you-search': 'Cuardaigh stadanna agus bealaí',
+    nearest: '{ mode } in aice leat',
+    'nearest-favourites': 'Ceanáin is gaire',
+    'nearest-favourites-browse-stops': 'Brabhsáil agus roghnaigh stadanna',
+    'nearest-favourites-no-favourites':
+      'Cláir ama do na stadanna agus feithiclí roghnaithe ar an léarscáil',
+    'nearest-no-stops':
+      'Níl aon stadanna ná stáisiúin ann don mhodh taistil roghnaithe in aice láimhe.',
+    'nearest-stops-airplane': 'aerfoirt',
+    'nearest-stops-bikepark': 'páirceáil agus taisteal do rothair',
+    'nearest-stops-bus': 'stadanna bus',
+    'nearest-stops-carpark': 'páirceáil agus taisteal do charranna',
+    'nearest-stops-citybike': 'stáisiúin rothar',
+    'nearest-stops-favorite': 'ceanáin in aice liom',
+    'nearest-stops-ferry': 'céibheanna farantóireachta',
+    'nearest-stops-rail': 'stáisiúin traenach',
+    'nearest-stops-subway': 'stáisiúin meitreo',
+    'nearest-stops-tram': 'stadanna tram',
+    'nearest-stops-update-location': 'Nuashonraigh {mode}',
+    'nearest-stops-updated-location': 'Athraíodh an suíomh ar an léarscáil',
+    'network-error': 'Earráid líonra',
+    'new-route': 'An bhfuil an bealach nua duit?',
+    next: 'Ar aghaidh',
+    'next-week': 'An tseachtain seo chugainn',
+    'no-departures': 'Gan imeachtaí',
+    'no-more-route-msg': 'Níor aimsíodh aon turas breise',
+    'no-route-already-at-destination': 'Tá tú ag do cheann scríbe cheana féin.',
+    'no-route-end': 'Roghnaigh ceann scríbe, le do thoil',
+    'no-route-found':
+      'Ar an drochuair, níor aimsíodh bealach {shortName} ({longName}).',
+    'no-route-msg': 'Ar an drochuair, níor aimsíodh aon mholtaí bealaigh',
+    'no-route-msg-with-changes':
+      'Ar an drochuair, níor aimsíodh aon mholtaí bealaigh. Deimhnigh do shocruithe cuardaigh nó bain triail as an bpointe tosaigh nó an ceann scríbe a athrú.',
+    'no-route-origin-same-as-destination':
+      'Níor aimsíodh aon mholtaí bealaigh toisc go bhfuil an pointe tosaigh agus an ceann scríbe mar an gcéanna.',
+    'no-route-showing-alternative-options':
+      'Níor aimsíodh aon mholtaí bealaigh le do shocruithe. D’aimsigh muid na roghanna bealaigh seo a leanas, áfach:',
+    'no-route-start': 'Roghnaigh pointe tosaigh, le do thoil',
+    'no-route-start-end':
+      'Roghnaigh pointe tosaigh agus ceann scríbe, le do thoil',
+    'no-trips-found':
+      'Níor aimsíodh aon turas don dáta roghnaithe {selectedDate}.',
+    'notification-minimize': 'Dún an teachtaireacht',
+    'notification-open': 'Oscail an teachtaireacht',
+    'number-of-intermediate-stops':
+      '{number, plural, =0 {Gan stad} one {1 stad} two {2 stad} few {{number} stad} many {{number} stad} other {{number} stad} }',
+    'number-of-spaces': 'Líon na spásanna',
+    'on-demand-service': 'Seirbhís ar éileamh',
+    'on-demand-service-description': 'Cur síos ar an mbealach',
+    'on-demand-service-prior-notice-days':
+      'Ní mór an t-ordú a dhéanamh {days} lá ar a laghad roimh an turas, tráth nach déanaí ná {time}.',
+    'on-demand-service-prior-notice-hours':
+      'Ní mór an t-ordú a dhéanamh {hours} uair a chloig ar a laghad roimh ré.',
+    'on-demand-service-prior-notice-minutes':
+      'Ní mór an t-ordú a dhéanamh {minutes} nóiméad ar a laghad roimh ré.',
+    'on-demand-service-route-disclaimer':
+      'D’fhéadfadh an bealach a thaispeántar ar an léarscáil a bheith difriúil ón mbealach iarbhír, a d’fhéadfaí a choigeartú de réir phleananna taistil paisinéirí eile.',
+    'one-way-journey': 'Fad turais aontreoraigh',
+    'open-app': 'Oscail an aip',
+    'open-operator-app': 'Oscail aip {operator}',
+    'open-settings': 'Oscail na socruithe',
+    'option-default': 'Meánach',
+    'option-least': 'Mall',
+    'option-less': 'Réidh',
+    'option-more': 'Tapa',
+    'option-most': 'An-tapa',
+    or: 'nó',
+    origin: 'Pointe tosaigh',
+    'origin-and-destination': 'Pointe tosaigh agus ceann scríbe',
+    'origin-defined': 'Pointe tosaigh socraithe',
+    'origin-outside-service':
+      'Níor aimsíodh aon mholtaí bealaigh toisc go bhfuil an pointe tosaigh lasmuigh de limistéar na seirbhíse.',
+    'other-dates': 'Dátaí eile',
+    'own-position': 'Do shuíomh reatha',
+    'page-not-found': 'Ní féidir an leathanach a aimsiú.',
+    paid: 'Íoctha',
+    'park-and-ride': 'Páirceáil agus Taisteal',
+    'park-and-ride-availability': 'Spásanna ar fáil',
+    'park-disclaimer-link': 'Léigh tuilleadh faoi Pháirceáil agus Taisteal',
+    'pay-attention': 'Tabhair faoi deara',
+    'payment-info-e-scooter':
+      'Tabhair faoi deara go gcaithfidh tú aip an oibreora ábhartha a úsáid chun na scútair a úsáid agus a íoc.',
+    'payment-info-e-scooter-or-taxi':
+      'Tabhair faoi deara go n-úsáideann agus go n-íocann tú as scútair, tacsaithe agus seirbhísí tugtha marcaíochta in aipeanna na soláthraithe seirbhíse féin.',
+    'payment-info-taxi':
+      'Tabhair faoi deara go n-úsáideann agus go n-íocann tú as tacsaithe agus seirbhísí tugtha marcaíochta in aipeanna na soláthraithe seirbhíse féin.',
+    payment_at_gate: 'Íocaíocht ag an ngeata ',
+    'personal-itineraries': 'Turais phearsanta',
+    personalization: 'Pearsantú',
+    'personalization-activated': 'Cumasaíodh an pearsantú',
+    'personalization-aria-dislike': 'Ní maith liom an turas seo',
+    'personalization-aria-like': 'Is maith liom an turas seo',
+    'personalization-ask': 'An maith leat an moladh bealaigh seo?',
+    'personalization-beta':
+      'Tá an pearsantú fós i gcéim tástála, rud a chiallaíonn go bhfuilimid ag triail na seirbhíse. Ba bhreá linn cloisteáil faoi do thaithí. Osclóidh an suirbhé i gcluaisín nua.',
+    'personalization-continue-choices':
+      'Roghnaigh ar mhaith leat d’stair úsáide a úsáid le haghaidh pearsantaithe nó tosú as an nua trí do stair úsáide a scriosadh.',
+    'personalization-continue-query':
+      'Conas ba mhaith leat leanúint ar aghaidh leis an bpearsantú?',
+    'personalization-disliked':
+      'Gheobhaidh tú níos lú moltaí den chineál seo feasta.',
+    'personalization-feedback': 'Tabhair aiseolas',
+    'personalization-history-keep': 'Bain leas as an stair úsáide',
+    'personalization-history-remove':
+      'Scrios stair an phearsantaithe agus tosaigh as an nua',
+    'personalization-info':
+      'Aimsigh do bhealaí is fearr leat agus taistil de réir do nósanna',
+    'personalization-liked': 'Gheobhaidh tú moltaí den chineál céanna feasta.',
+    'personalization-login-description':
+      'Is féidir leat moltaí bealaigh pearsantaithe a chumasú nuair atá tú logáilte isteach.',
+    'personalization-login-for-voting': 'Logáil isteach agus tabhair aiseolas',
+    'personalization-login-title': 'Logáil isteach chun moltaí a fháil',
+    'personalization-modal-feedback': 'Foghlaimímid ó d’aiseolas',
+    'personalization-modal-feedback-details':
+      'Úsáidimid d’aiseolas i moltaí turais. Inis dúinn do thuairim faoi na moltaí agus tabharfaimid do chuid roghanna san áireamh feasta.',
+    'personalization-modal-header': 'Mar a oibríonn moltaí bealaigh',
+    'personalization-modal-highlight': 'Cuirimid béim ar do chuid ceanán',
+    'personalization-modal-highlight-details':
+      'Cuirimid béim ar na bealaí is fearr leat sa phearsantú. Mar sin cuir na bealaí a úsáideann tú le do chuid ceanán.',
+    'personalization-modal-link': 'Cuir le nó cuir in eagar do chuid ceanán',
+    'personalization-new-feature':
+      'Faigh amach faoi mholtaí bealaigh pearsantaithe nua sna socruithe',
+    'personalization-new-header': 'Moltaí bealaigh cumasaithe',
+    'personalization-open-info': 'Léigh conas a oibríonn na moltaí',
+    'phone-number': 'Uimhir ghutháin',
+    'pick-mode': 'Modhanna taistil',
+    'pick-street-mode': 'Mo mhodhanna taistil',
+    pier: 'Céibh',
+    'pier-num': 'Céibh {platformCode}',
+    'pier-short-no-num': 'Céibh',
+    platform: 'Ardán',
+    'platform-num': 'Ardán {platformCode}',
+    'platform-short-no-num': 'Ard.',
+    polish: 'Polainnis',
+    position: 'Suíomh',
+    preview: 'Réamhamharc',
+    price: 'Praghas',
+    print: 'Priontáil',
+    'print-timetable': 'Clár ama seachtainiúil',
+    rail: 'Traein',
+    'read-more': 'Léigh tuilleadh',
+    realtime: 'Fíor-am',
+    releases: 'Fógraí',
+    'remove-favourite': 'Bain ó na ceanáin',
+    'rent-cycle-at': 'Bailigh rothar cathrach:',
+    'rent-e-scooter-at': 'Úsáid aip chun an scútar leictreach a dhíghlasáil',
+    'replacement-bus': 'Bus ionaid',
+    'restore-default-settings': 'Athshocraigh',
+    'restore-default-settings-aria-label': 'Athshocraigh na réamhshocruithe.',
+    'restore-default-settings-aria-label-done':
+      'Tá na réamhshocruithe in úsáid.',
+    'restore-default-settings-success': 'Athshocraíodh na réamhshocruithe',
+    'return-cycle-to': 'Cuir an rothar ar ais:',
+    'return-e-scooter-to': 'Fág an scútar in áit shábháilte',
+    'right-now': 'Faoi láthair',
+    route: 'Bealach',
+    'route-add-viapoint': 'Pointe idirthurais',
+    'route-destination-arrives': 'Tuirlingt amháin',
+    'route-destination-endpoint': 'Ag teacht isteach / Ceann scríbe deiridh',
+    'route-from-here': 'Pointe tosaigh',
+    'route-guide': 'Treoir bhealaigh',
+    'route-here': 'Ceann scríbe',
+    'route-no-stop': 'Gan stad',
+    'route-page-vehicle-position': 'Tá {mode} {shortName} ag stad {stopName}',
+    'route-page-vehicle-position-between':
+      'Tá {mode} {shortName} idir stad {stopName} agus stad {nextStopName}.',
+    'route-page-vehicle-selected': 'An roghnú reatha.',
+    'route-page.alternative-routes': 'Bealaí eile',
+    'route-page.choose-direction': 'Roghnaigh treo agus bealach',
+    'route-page.description': 'Bealach {shortName} - {longName}',
+    'route-page.future-routes': 'Bealaí sa todhchaí',
+    'route-page.main-routes': 'Treonna',
+    'route-page.pattern-chosen': 'Roghnaithe',
+    'route-page.pattern-select-title': 'Roghnaigh an bealach le taispeáint',
+    'route-page.select-time': 'Roghnaigh am',
+    'route-page.similar-routes': 'B’fhéidir go mbeadh suim agat freisin i',
+    'route-page.special-routes': 'Bealaí eile',
+    'route-page.title': 'Bealach {shortName}',
+    'route-page.title-short': 'Bealach',
+    'route-pattern-select-tooltip': 'Taispeáin bealaí',
+    'route-pattern-swap-tooltip': 'Athraigh treo',
+    'route-to-ferry': 'Bealach go dtí an chéibh',
+    'route-to-park': 'Bealach go dtí an pháirceáil',
+    'route-to-station': 'Bealach go dtí an stáisiún',
+    'route-to-stop': 'Bealach go dtí an stad',
+    'router-change-departure-time': 'Athraigh am imeachta ›',
+    'router-location-not-found':
+      'Roghnaigh suíomh ar an líonra bóithre nó ag stad, le do thoil.',
+    'router-location-not-found-title-1':
+      'Níl aon rochtain shainithe ar an gceann scríbe',
+    'router-location-not-found-title-2':
+      'Níl aon rochtain shainithe ar an bpointe tosaigh',
+    'router-location-not-found-title-3':
+      'Níl aon rochtain shainithe ar an bpointe tosaigh ná ar an gceann scríbe',
+    'router-only-walk':
+      'Níl aon rogha níos tapúla ná siúl ar fáil don bhealach a chuardaigh tú.',
+    'router-only-walk-title': 'Siúil an bealach',
+    'router-outside-bounds-3':
+      'Níor aimsíodh aon mholtaí bealaigh toisc go bhfuil an pointe tosaigh agus an ceann scríbe lasmuigh de limistéar na seirbhíse.',
+    'router-outside-service-period':
+      'Níl eolas clár ama ar fáil don am a roghnaigh tú.',
+    'router-stops-in-range-1':
+      'Níl aon stadanna iompair phoiblí sách gar don cheann scríbe roghnaithe.',
+    'router-stops-in-range-2':
+      'Níl aon stadanna iompair phoiblí sách gar don phointe tosaigh roghnaithe.',
+    'router-stops-in-range-3':
+      'Níl aon stadanna iompair phoiblí sách gar don phointe tosaigh ná don cheann scríbe roghnaithe.',
+    'router-system-error':
+      'Tharla earráid sa chóras. Bain triail eile as níos déanaí, le do thoil.',
+    'router-transit-connection-in-search-window':
+      'Níl aon seirbhísí ar fáil ag an am roghnaithe.',
+    'router-unable': 'Ní féidir na roghanna bealaigh a thaispeáint',
+    routes: 'Bealaí',
+    scooter: 'Scútar',
+    'scooter-availability': 'Scútair ar fáil ag an stáisiún faoi láthair',
+    'scooter-distance-duration':
+      'Taistil ar scútar ar feadh {duration} ({distance})',
+    'scooterwalk-distance-duration': 'Siúil do scútar {duration} ({distance}).',
+    'search-current-suggestion': 'Roghnú reatha: {selection}',
+    'search-fields.sr-instructions':
+      'Déanfar an cuardach bealaigh go huathoibríoch nuair a chuireann tú isteach an pointe tosaigh agus an ceann scríbe. Spreagfaidh athrú ar pharaiméadair chuardaigh cuardach nua. Nascleanúint go dtí na réimsí cuardaigh leis an eochair táib',
+    'searching-position': 'Ag aimsiú suímh...',
+    'select-all-routes': 'Roghnaigh gach bealach',
+    'select-date': 'Roghnaigh dáta',
+    'select-from-map-destination': 'Roghnaigh ceann scríbe',
+    'select-from-map-favourite': 'Roghnaigh ón léarscáil',
+    'select-from-map-origin': 'Roghnaigh pointe tosaigh',
+    'select-from-map-viaPoint': 'Roghnaigh pointe idirthurais',
+    'select-map-layers-header': 'Taispeáin ar an léarscáil',
+    'select-route': 'Roghnaigh bealach {mode} {shortName} go {headsign}',
+    'selected-routes': 'Línte roghnaithe',
+    'separate-ticket-required':
+      'Tá gá le ticéad ar leith don chuid seo den turas.',
+    'separate-ticket-required-disclaimer':
+      'Tá cuid amháin nó níos mó sa turas seo nach ndíolann {agencyName} ticéid dó.',
+    'separate-ticket-required-for-call-agency-disclaimer':
+      'Cuimsíonn an turas seirbhís iompair ar éileamh. Deimhnigh na modhanna íocaíochta agus na nósanna imeachta ar ',
+    'services-and-features': 'Seirbhísí agus áiseanna',
+    'set-stop-as-routes': 'Socraigh an stad mar cheann an bhealaigh',
+    'set-time-earlier-button-label': 'Socraigh am taistil níos luaithe',
+    'set-time-later-button-label': 'Socraigh am taistil níos déanaí',
+    settings: 'Socruithe',
+    'settings-changed-by-you': 'D’athraigh tú do chuid socruithe',
+    'settings-dropdown-close-label': 'Dún roghanna',
+    'settings-dropdown-open-label': 'Oscail roghanna',
+    'settings-e-scooter':
+      'Is féidir leat na scútair leictreacha is fearr leat a roghnú agus iad a chur mar chuid de na moltaí bealaigh. {paymentInfo}',
+    'settings-e-scooter-on':
+      'Déan scútair leictreacha mar rogha bhuan i do chuid socruithe',
+    'settings-e-scooter-routes':
+      'Cuir scútair leictreacha mar chuid de do chuid bealaí!',
+    'settings-label-change': 'Athraigh na socruithe',
+    'settings-missing-itineraries-body':
+      'Fágann roinnt roghanna sna socruithe roinnt roghanna bealaigh ar lár.',
+    'settings-missing-itineraries-header':
+      'An bhfuil roinnt roghanna bealaigh ar iarraidh?',
+    'settings-taxi':
+      'Is féidir leat na seirbhísí tacsaí agus tugtha marcaíochta is fearr leat a roghnú lena gcur san áireamh i bpleanáil bealaigh.',
+    'settings-taxi-routes':
+      'Cuir seirbhísí tacsaí agus tugtha marcaíochta mar chuid de do chuid bealaí!',
+    'show-all': 'Taispeáin gach rud',
+    'show-departures': 'Taispeáin imeachtaí',
+    'show-more': 'Taispeáin tuilleadh',
+    'show-more-stops-near-you': 'Taispeáin tuilleadh stadanna in aice leat',
+    'show-routes': 'Roghnaigh bealaí',
+    'skip-to-content': 'Téigh go dtí an t-ábhar',
+    speedtram: 'Traein Éadrom',
+    station: 'Stáisiún',
+    'station-entrance': 'Bealach isteach',
+    'station-exit': 'Bealach amach',
+    stop: 'Stad',
+    'stop-departure-time-future':
+      'Tá an t-am imeachta {minutes} nóiméad ó shin',
+    'stop-departure-time-past': 'B’shin é an t-am imeachta',
+    'stop-list-update.sr-instructions':
+      'Nuashonrófar amanna imeachta gach stad i bhfíor-am.',
+    'stop-near-you': 'Cuardaigh stadanna agus bealaí in aice leat',
+    'stop-near-you-modal-grant-permission': 'nó cumasaigh seirbhísí suímh',
+    'stop-near-you-modal-grant-permission-info':
+      'Is féidir leat seirbhísí suímh a chumasú i socruithe do ghutháin nó do bhrabhsálaí, rud a ligeann don tseirbhís do shuíomh reatha a úsáid.',
+    'stop-near-you-modal-header': 'Níor chumasaigh tú seirbhísí suímh',
+    'stop-near-you-modal-info':
+      'Éilíonn feidhm na stadanna in aice láimhe rochtain ar shuíomh.',
+    'stop-near-you-update-alert': 'Nuashonraíodh na stadanna is gaire',
+    'stop-page.description': 'Stad {name} - {code}',
+    'stop-page.right-now.loaded': 'leathanach an stad luchtaithe',
+    'stop-page.title': 'Stad {name} - {code}',
+    'stop-page.title-short': 'Stad',
+    'stop-virtual-monitor': 'Scáileán stad',
+    stops: 'Stadanna',
+    'stops-near-you.description':
+      'Cláir ama agus feithiclí do stadanna in aice leat',
+    'stops-near-you.title': 'Cláir ama do stadanna in aice láimhe',
+    'street-mode-bike-aria':
+      'Taispeáin bealach rothaíochta. Fad {duration}, achar {length}',
+    'street-mode-bikeandvehicle-aria':
+      'Taispeáin teaglaim de rothaíocht agus iompar poiblí. Fad {duration}, achar {length}',
+    'street-mode-car-aria':
+      'Taispeáin bealach tiomána. Fad {duration}, achar {length}',
+    'street-mode-carandvehicle-aria':
+      'Taispeáin bealach a d’fhéadfadh modhanna taistil eile a chuimsiú, mar bháid fharantóireachta do charranna. Fad {duration}, achar {length}',
+    'street-mode-parkandride-aria':
+      'Taispeáin bealach Páirceáil agus Taisteal. Fad {duration}, achar tiomána {length}',
+    'street-mode-walk-aria':
+      'Taispeáin bealach siúil. Fad {duration}, achar {length}',
+    subway: 'Meitreo',
+    'subway-entrance.sr-description':
+      'Bealach isteach an stáisiúin meitreo {entranceName}',
+    'subway-entrance.sr-description.accessible':
+      'Bealach isteach an stáisiúin meitreo {entranceName}, inrochtana',
+    'subway-exit.sr-description':
+      'Bealach amach an stáisiúin meitreo {entranceName}}',
+    'subway-exit.sr-description.accessible':
+      'Bealach amach an stáisiúin meitreo {entranceName}, inrochtana',
+    'summary-page.description': '{from} - {to}',
+    'summary-page.row-label': 'Moladh turais {number}',
+    'summary-page.title': 'Moltaí turais',
+    surveillance_cameras: 'Faireachas ceamara',
+    'swap-order-button-label':
+      'Athraigh áit an phointe tosaigh agus an chinn scríbe',
+    swedish: 'Sualainnis',
+    'swipe-disruption-info-tab': 'Cluaisíní eolais faoi chur isteach',
+    'swipe-message-bar-tab': 'Cluaisíní teachtaireachta',
+    'swipe-result-tab-left': 'Taispeáin an cluaisín roimhe seo.',
+    'swipe-result-tab-right': 'Taispeáin an chéad chluaisín eile.',
+    'swipe-stops-near-you-tab': 'Cluaisíní stadanna in aice leat.',
+    'swipe-summary-page-tab': 'Cluaisíní turais',
+    taxi: 'Tacsaí',
+    'taxi-alternative':
+      'Cad faoi chuid den turas a dhéanamh ar thacsaí? {paymentInfo}',
+    'taxi-distance-duration': 'Taistil {duration} ({distance})',
+    'taxi-external': 'Tacsaí',
+    'taxis-and-ride-hailing': 'Tacsaithe agus seirbhísí tugtha marcaíochta',
+    terminal: 'Teirminéal',
+    'terminal-page.description': 'Teirminéal {name}',
+    'terminal-page.title': 'Teirminéal {name}',
+    'terminal-page.title-short': 'Teirminéal',
+    terminus: 'Ceann scríbe deiridh',
+    'this-week': 'An tseachtain seo',
+    'ticket-information': 'Eolas ticéad',
+    timetable: 'Clár ama',
+    'to-bicycle': 'rothar',
+    'to-bus': 'bus',
+    'to-e-scooter': 'scútar',
+    'to-ferry': 'bád fartha',
+    'to-frontpage': 'Go dtí an leathanach baile',
+    'to-rail': 'traein',
+    'to-speedtram': 'traein éadrom',
+    'to-subway': 'meitreo',
+    'to-tram': 'tram',
+    today: 'Inniu',
+    tomorrow: 'Amárach',
+    track: 'Raon',
+    'track-num': 'Raon {platformCode}',
+    'tracking-button-off': 'rianú as',
+    'tracking-button-offline': 'theip ar rianú',
+    'tracking-button-on': 'rianú ar siúl',
+    'traffic-now': 'Tráchtáil anois',
+    'traffic-now-long': 'Seirbhísí anois',
+    'traffic-now_bread': 'Ag taisteal',
+    'traffic-now_canceled-trips--amount':
+      'Ag taispeáint {amount} as {totalAmount} bealach',
+    'traffic-now_canceled-trips--simple': '{amount} curtha ar ceal',
+    'traffic-now_description':
+      'Eolas cothrom le dáta faoi chur isteach agus eisceachtaí. ',
+    'traffic-now_description_see-also':
+      'Féach freisin {amount, plural, =1 {{link1},} other {{link1} chomh maith le {link2},} } atá le fáil go mion ar a leathanach féin.',
+    'traffic-now_description_see-also--link1':
+      'laethanta saoire agus eisceachtaí',
+    'traffic-now_description_see-also--link2': 'athruithe móra',
+    'traffic-now_filters_entity-search': 'Cuardaigh bealach nó stad ar leith',
+    'traffic-now_filters_entity-search--placeholder':
+      'Bealach, stad nó stáisiún',
+    'traffic-now_filters_operator-select-legend':
+      'Taispeáin na hoibreoirí seo amháin',
+    'traffic-now_filters_operator-select-placeholder':
+      'Roghnaigh ceann amháin nó níos mó',
+    'traffic-now_filters_toggles--cancellations-only': 'Cealuithe amháin',
+    'traffic-now_filters_toggles--favourites-only': 'Ceanáin amháin',
+    'traffic-now_filters_validity-period': 'Scag de réir tréimhse bailíochta',
+    'traffic-now_filters_vehicle-mode': 'Scag de réir modh feithicle',
+    'traffic-now_filters_view-results': 'Féach ar na torthaí',
+    'traffic-now_go-back': 'Téigh ar ais',
+    'traffic-now_go-to-route-page': 'Féach ar an mbealach',
+    'traffic-now_link': 'Seirbhísí anois',
+    'traffic-now_link-description': 'Féach ar athruithe agus cur isteach',
+    'traffic-now_more-routes': '{count} bealach eile',
+    trafficnow: 'Tráchtáil anois',
+    'trafficnow-bread': 'Ag taisteal',
+    'trafficnow-description':
+      'Eolas cothrom le dáta faoi chur isteach agus eisceachtaí',
+    tram: 'Tram',
+    transfer: 'Aistriú',
+    'travel-time': '{min} nóim',
+    'travel-time-label': 'Am taistil',
+    'travel-time-with-hours': '{h} u {min} nóim',
+    'trip-information': 'Eolas turais',
+    'try-again': 'Bain triail eile as',
+    upcoming: 'Atá le teacht',
+    'use-national-service-postfix': '.',
+    'use-national-service-prefix':
+      'Molaimid duit an pleanálaí turais náisiúnta a thriail, ',
+    'use-own-position': 'Úsáid an suíomh reatha',
+    userinfo: 'Mo chuid eolais',
+    usermenu: 'Roghchlár úsáideora',
+    valid: 'Gníomhach',
+    'via-leg-stop-duration': 'Ag an bpointe idirthurais {stayDuration}',
+    'via-point': 'Pointe idirthurais',
+    'view-route': 'Féach ar an mBealach',
+    vr_ticket: 'Ticéad VR',
+    wait: 'Fan',
+    'wait-amount-of-time': 'Fan {duration}',
+    'wait-in-vehicle': 'Fan ar bord',
+    walk: 'siúl',
+    'walk-bike-itinerary-1': 'Ní bhfuair do chuardach ach bealaí siúil.',
+    'walk-bike-itinerary-2': 'Ní bhfuair do chuardach ach bealaí rothaíochta.',
+    'walk-bike-itinerary-3':
+      'Ní bhfuair do chuardach ach bealaí siúil agus rothaíochta.',
+    'walk-bike-itinerary-4':
+      'Ní bhfuair do chuardach ach bealaí a éilíonn rothaíocht nó tiomáint.',
+    'walk-distance-duration': 'Siúil {duration} ({distance})',
+    'walk-only': 'Siúl amháin',
+    'walking-speed': 'Luas siúil',
+    'warning-call-agency':
+      'Ar éileamh amháin: {routeName}, a chaithfear a chur in áirithe roimh ré.',
+    'warning-call-agency-no-route':
+      'Ar éileamh amháin. Caithfear é a chur in áirithe roimh ré.',
+    weather: 'Aimsir',
+    'weather-data-source': 'Foinse: Institiúid Mheitéareolaíoch na Fionlainne',
+    'weather-detail-title': 'Réamhaisnéis na haimsire don phointe tosaigh ag ',
+    'weather-icon-1': 'Glan',
+    'weather-icon-2': 'Scamallach go páirteach',
+    'weather-icon-21': 'Ceathanna éadroma',
+    'weather-icon-22': 'Ceathanna',
+    'weather-icon-23': 'Ceathanna troma',
+    'weather-icon-3': 'Modartha',
+    'weather-icon-31': 'Báisteach éadrom',
+    'weather-icon-32': 'Báisteach',
+    'weather-icon-33': 'Báisteach throm',
+    'weather-icon-41': 'Ceathanna sneachta éadroma',
+    'weather-icon-42': 'Ceathanna sneachta',
+    'weather-icon-43': 'Ceathanna sneachta troma',
+    'weather-icon-51': 'Sneachta éadrom',
+    'weather-icon-52': 'Sneachta',
+    'weather-icon-53': 'Sneachta trom',
+    'weather-icon-61': 'Tointreacha toirní',
+    'weather-icon-62': 'Tointreacha toirní troma',
+    'weather-icon-63': 'Toirneach',
+    'weather-icon-64': 'Toirneach throm',
+    'weather-icon-71': 'Ceathanna flichshneachta éadroma',
+    'weather-icon-72': 'Ceathanna flichshneachta',
+    'weather-icon-73': 'Ceathanna flichshneachta troma',
+    'weather-icon-81': 'Flichshneachta éadrom',
+    'weather-icon-82': 'Flichshneachta',
+    'weather-icon-83': 'Flichshneachta trom',
+    'weather-icon-91': 'Ceo tanaí',
+    'weather-icon-92': 'Ceo',
+    'week-number': 'Seachtain {number}',
+    where: 'Cá bhfuil tú ag dul?',
+    zone: 'Crios',
+    'zone-info': 'Crios {zone}',
+    'zone-unknown': 'Crios anaithnid',
+  },
+};

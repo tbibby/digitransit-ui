@@ -66,6 +66,7 @@ export default {
     MAP: {
       default: `${MAP_URL}/`,
       en: `${MAP_URL}/`,
+      ga: `${MAP_URL}/`,
     },
 
     // Dropped the `?digitransit-subscription-key=...` query param
@@ -95,7 +96,14 @@ export default {
   favicon: './app/client/images/default/default-favicon.png',
 
   timeZone: 'Europe/Dublin',
-  availableLanguages: ['en'],
+  // 'ga' added 2026-09-25 (task 12) as a first-pass, machine-translation-
+  // quality Gaeilge translation — not yet reviewed by a native speaker or
+  // checked against TFI/Irish Rail terminology conventions. Shipped as an
+  // additional, opt-in language (defaultLanguage stays 'en') rather than
+  // replacing English, both because of that review gap and because OTP-
+  // sourced stop/route names and trip headsigns don't localize yet (task
+  // 12 item 7 — separate, unimplemented).
+  availableLanguages: ['en', 'ga'],
   defaultLanguage: 'en',
 
   defaultEndpoint: {
@@ -172,6 +180,18 @@ export default {
         paragraphs: [
           'This is a pilot journey planner for Ireland, built on the open-source Digitransit platform.',
           'This service is a modified fork of Digitransit-UI, licensed under the GNU Affero General Public License v3 (or later), also available under the European Union Public Licence v1.2. The complete source code corresponding to this running version is published at <a href="https://github.com/tbibby/digitransit-ui/tree/nta" target="_blank" rel="noreferrer">github.com/tbibby/digitransit-ui</a>.',
+        ],
+      },
+    ],
+    // Initial machine-translation-assisted pass (2026-09-25) — same caveat as
+    // app/translations/ga.js: needs a native-speaker/TFI-terminology review
+    // before this ships, see TASKS.md task 12.
+    ga: [
+      {
+        header: 'Maidir leis an tseirbhís seo',
+        paragraphs: [
+          'Is pleanálaí turais phíolótach é seo d’Éirinn, tógtha ar an ardán foinse oscailte Digitransit.',
+          'Is gabhalbhranch modhnaithe de Digitransit-UI í an tseirbhís seo, ceadúnaithe faoin GNU Affero General Public License v3 (nó níos déanaí), atá ar fáil freisin faoin European Union Public Licence v1.2. Foilsítear an bunchód iomlán a fhreagraíonn don leagan reatha seo ag <a href="https://github.com/tbibby/digitransit-ui/tree/nta" target="_blank" rel="noreferrer">github.com/tbibby/digitransit-ui</a>.',
         ],
       },
     ],

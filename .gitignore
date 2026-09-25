@@ -72,6 +72,7 @@ CONTEXT.md
 TASKS.md
 TECHNICAL-IMPLEMENTATION.md
 RESEARCH.md
+RESEARCH-*.md
 
 # Real secrets (API keys, subscription tokens, etc). digitransit-ui reads
 # these from process.env at runtime, never hardcodes them in committed
