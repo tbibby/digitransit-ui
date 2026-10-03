@@ -62,3 +62,25 @@
 .itinerary-summary-row span {
   font-size: 1rem !important;
 }
+
+/* Map leg markers (route-number labels) have a fixed 18px height sized for
+   the upstream 12px font; make room for the 16px minimum. */
+.map {
+  .arrow-bottomLeft,
+  .arrow-bottomRight,
+  .arrow-topRight,
+  .arrow-topLeft,
+  .legmarker {
+    height: 24px;
+
+    div {
+      height: 24px;
+      margin-top: -12px;
+      align-items: center;
+    }
+
+    .map-route-number {
+      line-height: 1;
+    }
+  }
+}
