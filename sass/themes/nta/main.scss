@@ -35,3 +35,30 @@
 [id^='datetimepicker'][id$='-open'] {
   min-height: 24px;
 }
+
+/* 16px minimum for digital copy (brand guidelines). The digitransit-component
+   packages hard-code 12-15px in CSS modules whose CSS is injected after this
+   stylesheet, so match their hashed class names by substring (and use
+   !important) rather than editing the shared packages. */
+[class*='radio-textbutton-label'],
+[class*='departure-now-button'],
+[class*='datetimepicker-select__single-value'],
+[class*='styles_name'],
+[class*='open-button'] span,
+[class*='open-button'],
+[class*='combobox-container'],
+.datetimepicker-select__input,
+.settings-button-text,
+.time-navigation-btn span,
+.time-navigation-btn,
+.leaflet-control-scale-line,
+.leaflet-control-attribution,
+.leaflet-control-attribution a,
+.itinerary-stop-code,
+.vehicle-number,
+.start-time,
+.leg-duration,
+.map-route-number,
+.itinerary-summary-row span {
+  font-size: 1rem !important;
+}

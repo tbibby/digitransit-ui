@@ -29,8 +29,9 @@ $success-bar-color: $brand-green-button;
 
 /* mode colors (brand guidelines p13); modes without a brand colour use the
    secondary palette */
-$walk-color: #35bdb2;
-$bicycle-color: #8ba3d4;
+$walk-color: #2ea59b; /* brand #35bdb2 darkened to 3:1 on white */
+$bicycle-color: #7995cd; /* brand #8ba3d4 darkened to 3:1 on white */
+$citybike-color: #5175be; /* brand bike blue darkened to 4.5:1 (white button text) */
 $bus-color: #00a651;
 $bus-express-color: #00945d;
 $replacement-bus-color: #e0134f;
@@ -48,3 +49,11 @@ $taxi-external-map-color: #c1cd23;
 $font-family: 'Inter', arial, sans-serif;
 $font-family-narrow: 'Inter', arial, sans-serif;
 $nav-logo-height: 40px;
+$info-accent-color: $brand-teal;
+
+/* Brand guide recommends 16px minimum for digital copy */
+$font-size-xxxxsmall: 1rem;
+$font-size-xxxsmall: 1rem;
+$font-size-xxsmall: 1rem;
+$font-size-xsmall: 1rem;
+$font-size-small: 1rem;

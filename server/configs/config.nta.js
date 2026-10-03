@@ -175,6 +175,7 @@ export default {
     subway: '#F35B0F',
     rail: '#0024A8',
     ferry: '#1260BF',
+    citybike: '#5175BE',
     taxi: '#C1CD23',
     carpark: '#00A651',
   },

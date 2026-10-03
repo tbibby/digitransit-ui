@@ -265,7 +265,7 @@ function MapWithTrackingStateHandler(
     color = '#888';
   } else {
     img = 'icon-tracking';
-    color = mapTrackingState ? '#007ac9' : '#78909c';
+    color = mapTrackingState ? config.colors.primary : '#78909c';
   }
   // eslint-disable-next-line no-nested-ternary
   const ariaLabel = position.locationingFailed

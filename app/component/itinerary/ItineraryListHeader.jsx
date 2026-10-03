@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { AlertSeverityLevelType } from '../../../utils/shared/constants';
+import { useConfigContext } from '../../client/ConfigContext';
 import ServiceAlertIcon from '../ServiceAlertIcon';
 
 export default function ItineraryListHeader({
@@ -10,6 +11,7 @@ export default function ItineraryListHeader({
   showBikeBoardingInfo,
   showCarBoardingInfo,
 }) {
+  const { colors } = useConfigContext();
   return (
     <div className="itinerary-summary-subtitle-container">
       <FormattedMessage id={translationId} defaultMessage={defaultMessage} />
@@ -18,7 +20,7 @@ export default function ItineraryListHeader({
           <div className="with-bike-icon notification-icon">
             <ServiceAlertIcon
               className="inline-icon"
-              color="#007AC9"
+              color={colors.primary}
               severityLevel={AlertSeverityLevelType.Info}
             />
           </div>
@@ -35,7 +37,7 @@ export default function ItineraryListHeader({
           <div className="with-car-icon notification-icon">
             <ServiceAlertIcon
               className="inline-icon"
-              color="#007AC9"
+              color={colors.primary}
               severityLevel={AlertSeverityLevelType.Info}
             />
           </div>
