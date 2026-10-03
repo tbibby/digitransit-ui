@@ -19,6 +19,8 @@ const Language = ({ lang }, { match }) => {
     <a
       id={`lang-${lang}`}
       aria-label={aria}
+      lang={lang}
+      hrefLang={lang}
       key={lang}
       href={`/${lang}${match.location.pathname}${match.location.search}`}
       className={`${(highlight && 'selected') || ''} noborder lang`}

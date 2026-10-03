@@ -50,6 +50,10 @@ export default {
   URL: {
     OTP: OTP_URL,
 
+    // Self-hosted Inter (static/assets/fonts/inter, copied to _static by
+    // webpack.config.js) instead of config.default.js's Google Fonts URL.
+    FONT: '/assets/fonts/inter/inter.css',
+
     // Mapbox's Styles API serves native 512px tiles (with `@2x` retina
     // variants, matching the `{size}` token app/component/map/Map.jsx
     // substitutes) — same as HSL's own hsl-map-server, so `map.tileSize`/
@@ -88,17 +92,20 @@ export default {
   API_SUBSCRIPTION_QUERY_PARAMETER_NAME: 'access_token',
   API_SUBSCRIPTION_TOKEN: MAP_TOKEN,
 
-  // Placeholder branding — no NTA logo asset exists yet, so keep this
-  // dormant (as config.kela.js does) rather than pointing at a file that
-  // isn't there.
+  // Brand mode icons (leaf badges + glyphs from the brand guidelines): the
+  // default sprite with six symbols swapped, see static/assets/svg-sprite.nta.svg.
+  sprites: 'assets/svg-sprite.nta.svg',
+
+  // Placeholder logo: a plain leaf-shaped green tile with no text or artwork,
+  // so the official logo can replace it by swapping this one asset.
   textLogo: true,
-  logo: null,
+  logo: 'nta/logo-placeholder.svg',
   favicon: './app/client/images/default/default-favicon.png',
 
   timeZone: 'Europe/Dublin',
   // 'ga' added 2026-09-25 (task 12) as a first-pass, machine-translation-
   // quality Gaeilge translation — not yet reviewed by a native speaker or
-  // checked against TFI/Irish Rail terminology conventions. Shipped as an
+  // checked against Irish public-transport terminology conventions. Shipped as an
   // additional, opt-in language (defaultLanguage stays 'en') rather than
   // replacing English, both because of that review gap and because OTP-
   // sourced stop/route names and trip headsigns don't localize yet (task
@@ -156,8 +163,20 @@ export default {
     keywords: 'nta,journey planner,ireland,transport',
   },
 
+  // Mode colours match sass/themes/nta/_theme.scss. `primary` is used for
+  // text-bearing icons, so it is the contrast-safe teal, not the brand green.
   colors: {
-    primary: '#1B3E67',
+    primary: '#0F3E51',
+    caution: '#E0134F',
+    airplane: '#3F5865',
+    bus: '#00A651',
+    'replacement-bus': '#E0134F',
+    tram: '#4F3695',
+    subway: '#F35B0F',
+    rail: '#0024A8',
+    ferry: '#1260BF',
+    taxi: '#C1CD23',
+    carpark: '#00A651',
   },
 
   menu: {
@@ -195,7 +214,7 @@ export default {
       },
     ],
     // Initial machine-translation-assisted pass (2026-09-25) — same caveat as
-    // app/translations/ga.js: needs a native-speaker/TFI-terminology review
+    // app/translations/ga.js: needs a native-speaker/terminology review
     // before this ships, see TASKS.md task 12.
     ga: [
       {

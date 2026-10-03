@@ -1,2 +1,37 @@
 @import 'theme';
 @import '../../main';
+
+/* Header logo: leaf-shaped tile (background image) at top-left, app title
+   beside it rather than over it. The tile is square, so its width is the
+   header logo height. */
+.top-bar .logo {
+  background-size: auto 100%;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+
+  .title {
+    margin-left: calc(#{$nav-logo-height} + 0.75em);
+    color: $white;
+  }
+}
+
+/* Touch targets: brand accessibility guidance asks for at least 24x24 CSS px
+   and recommends 44x44 for icon buttons. The map zoom buttons (36px) and the
+   rest already meet the minimum; the main-menu button and the datetime
+   toggle did not. */
+#openMenuButton,
+.map-control-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#openMenuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[id^='datetimepicker'][id$='-open'] {
+  min-height: 24px;
+}

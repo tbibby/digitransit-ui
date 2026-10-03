@@ -3,16 +3,48 @@
 /* Base theme */
 @import '../default/theme';
 
+/* Brand palette (see TASKS.md task 13) */
+$brand-green: #00a651; /* icons / large graphics only — 3.75:1 on white */
+$brand-green-button: #108a00; /* text-bearing buttons only, 4.5:1 on white */
+$brand-teal: #0f3e51; /* body text, links, top bar — 11.48:1 on white */
+$brand-light-green: #bae0ce;
+
 /* main theme colors — matches config.nta.js's colors.primary */
-$theme-primary-color: #1b3e67;
-$theme-secondary-color: darken($theme-primary-color, 20%);
-$highlight-color: $theme-primary-color;
-$action-color: $theme-primary-color;
-$bus-color: $theme-primary-color;
-$viewpoint-marker-color: $theme-primary-color;
-$current-location-color: $theme-primary-color;
-$standalone-btn-color: $theme-primary-color;
-$link-color: $theme-primary-color;
-$top-bar-color: $theme-primary-color;
-$desktop-title-color: $theme-primary-color;
-$desktop-title-arrow-icon-color: $theme-secondary-color;
+$theme-primary-color: $brand-teal;
+$theme-secondary-color: $brand-green-button;
+$primary-font-color: $white;
+$highlight-color: $brand-teal;
+$action-color: $brand-green-button;
+$viewpoint-marker-color: $brand-green;
+$current-location-color: $brand-green;
+$standalone-btn-color: $brand-green-button;
+$link-color: $brand-teal;
+$top-bar-color: $brand-teal;
+$desktop-title-color: $brand-teal;
+$desktop-title-arrow-icon-color: $brand-green-button;
+$from-color: $brand-green-button;
+$slider-ok-color: $brand-green-button;
+$realtime-color: $brand-green-button;
+$success-bar-color: $brand-green-button;
+
+/* mode colors (brand guidelines p13); modes without a brand colour use the
+   secondary palette */
+$walk-color: #35bdb2;
+$bicycle-color: #8ba3d4;
+$bus-color: #00a651;
+$bus-express-color: #00945d;
+$replacement-bus-color: #e0134f;
+$tram-color: #4f3695;
+$speedtram-color: #4f3695;
+$rail-color: #0024a8;
+$metro-color: #f35b0f;
+$ferry-color: #1260bf;
+$airplane-color: #3f5865;
+$funicular-color: #774a9e;
+$taxi-external-color: #c1cd23;
+$taxi-external-map-color: #c1cd23;
+
+/* typography — Inter, per brand guidelines for digital applications */
+$font-family: 'Inter', arial, sans-serif;
+$font-family-narrow: 'Inter', arial, sans-serif;
+$nav-logo-height: 40px;

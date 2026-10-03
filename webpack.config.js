@@ -124,6 +124,10 @@ const productionPlugins = [
         },
         to: path.join(rootDir, '_static/assets/geojson'),
       },
+      {
+        from: path.join(rootDir, 'static/assets/fonts'),
+        to: path.join(rootDir, '_static/assets/fonts'),
+      },
     ],
   }),
   new EntrypointStatsPlugin('../stats.json'),
