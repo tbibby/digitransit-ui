@@ -4,8 +4,9 @@ export default function getMetadata(lang, host, url, config) {
   const iconPath = `${root}/${path}`;
   const imageHost = config.URL.ASSET_URL || `https://${host}`;
 
+  const title = config.titles?.[lang] || config.title;
   const baseData = {
-    title: config.title,
+    title,
 
     meta: [
       {
@@ -102,7 +103,7 @@ export default function getMetadata(lang, host, url, config) {
     return {
       meta: baseData.meta.concat(config.metaData.meta),
       link: baseData.link.concat(config.metaData.link),
-      title: config.title,
+      title,
     };
   }
 

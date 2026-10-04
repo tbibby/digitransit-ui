@@ -93,7 +93,7 @@ function RoutePage({ route, match, breakpoint, error = undefined }) {
     <div className="route-page-container">
       <div className="header-for-printing">
         <h1>
-          {config.title}
+          {config.titles?.[config.language] || config.title}
           {` - `}
           <FormattedMessage id="route-guide" defaultMessage="Route guide" />
         </h1>

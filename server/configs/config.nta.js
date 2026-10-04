@@ -1,5 +1,6 @@
 const CONFIG = 'nta';
 const APP_TITLE = 'National Journey Planner';
+const APP_TITLE_GA = 'Pleanálaí Turais Náisiúnta';
 const APP_DESCRIPTION =
   'This is a pilot journey planner for Ireland, built on the open-source Digitransit platform.';
 
@@ -34,6 +35,8 @@ const MAP_URL_GA =
 export default {
   CONFIG,
   title: APP_TITLE,
+  // per-language override for the visible heading and page title
+  titles: { en: APP_TITLE, ga: APP_TITLE_GA },
 
   URL: {
     OTP: OTP_URL,

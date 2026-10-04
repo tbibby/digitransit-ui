@@ -4,7 +4,7 @@ import { useConfigContext } from '../client/ConfigContext';
 
 const LogoSmall = ({ logo }) => {
   const config = useConfigContext();
-  const { title } = config;
+  const title = config.titles?.[config.language] || config.title;
   if (config.textLogo && !logo) {
     return (
       <span className="title" role="heading" aria-level="1">
