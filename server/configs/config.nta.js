@@ -21,27 +21,15 @@ const GEOCODING_BASE_URL =
   process.env.GEOCODING_BASE_URL ||
   'https://projects.bibby.ie/tiraimsitheoir/pelias/v1';
 
-// Third-party raster tiles (CONTEXT.md's "prerequisites" section).
-// digitransit-ui only ever consumes raster PNGs (see RESEARCH.md's "Map
-// tiles" section — no MapLibre/vector-tile code path in this codebase).
-// CARTO's anonymous `basemaps.cartocdn.com` (the original pick here) turned
-// out to require an API key after all — it now serves a watermarked
-// "API KEY REQUIRED" tile instead of erroring, which wasn't caught until an
-// actual visual check (2026-09-25). Switched to Mapbox's Styles API
-// (`light-v11`), using the same account/token pattern already proven by
-// `../maptan/` (an `access_token` query param, not a path segment or
-// header) — see `MAP_TOKEN` below.
+// Self-hosted raster tiles from golearscail (tileserver-gl rendering our own
+// OpenMapTiles style, English and Irish variants). digitransit-ui only ever
+// consumes raster PNGs. 512px tiles with `map.zoomOffset: -1` below; no token.
 const MAP_URL =
   process.env.MAP_URL ||
-  'https://api.mapbox.com/styles/v1/mapbox/light-v11/tiles';
-
-// Mapbox requires a token on every tile request. Scoped
-// (`https://pleanalaiturais.bibby.ie/*` URL restriction, 2026-09-25) to this
-// domain in the Mapbox dashboard — a token without that restriction, or one
-// scoped to a different domain (e.g. `../maptan/`'s own token), would 403.
-// No hardcoded fallback: this is a credential, not a URL, and must come from
-// `.env` (gitignored, see CONTEXT.md's "Fork setup").
-const { MAP_TOKEN } = process.env;
+  'https://golearscail.bibby.ie/styles/positron-stock/512';
+const MAP_URL_GA =
+  process.env.MAP_URL_GA ||
+  'https://golearscail.bibby.ie/styles/positron-ga/512';
 
 export default {
   CONFIG,
@@ -54,23 +42,15 @@ export default {
     // webpack.config.js) instead of config.default.js's Google Fonts URL.
     FONT: '/assets/fonts/inter/inter.css',
 
-    // Mapbox's Styles API serves native 512px tiles (with `@2x` retina
-    // variants, matching the `{size}` token app/component/map/Map.jsx
-    // substitutes) — same as HSL's own hsl-map-server, so `map.tileSize`/
-    // `map.zoomOffset` below match config.default.js's values rather than
-    // needing an override (unlike CARTO's 256px tiles, the original pick
-    // here).
-    //
     // `getLayerBaseUrl` (utils/client/mapLayerUtils.js) does
     // `urlOrUrlMap[lang] || urlOrUrlMap.default` — config.default.js's own
     // `URL.MAP.en` (HSL's tile server) would otherwise win over our
-    // `.default` override here, since configMerger deep-merges per key and
-    // `availableLanguages`/`defaultLanguage` below are both `'en'`. Every
-    // language key we support needs its own override, not just `.default`.
+    // `.default` override here, since configMerger deep-merges per key.
+    // Every language key we support needs its own override.
     MAP: {
       default: `${MAP_URL}/`,
       en: `${MAP_URL}/`,
-      ga: `${MAP_URL}/`,
+      ga: `${MAP_URL_GA}/`,
     },
 
     // Dropped the `?digitransit-subscription-key=...` query param
@@ -82,15 +62,8 @@ export default {
     PELIAS_PLACE: `${GEOCODING_BASE_URL}/place`,
   },
 
-  // This is Mapbox's `access_token` query param, not HSL's metered-API
-  // subscription key (PELIAS/PELIAS_REVERSE_GEOCODER/PELIAS_PLACE above are
-  // built as complete URLs and don't go through this mechanism at all, so
-  // turning it on doesn't affect the geocoder). client.jsx and
-  // Disruptions.jsx also read this flag and would append the same query
-  // param to OTP requests — harmless there, OTP ignores unknown params.
-  hasAPISubscriptionQueryParameter: true,
-  API_SUBSCRIPTION_QUERY_PARAMETER_NAME: 'access_token',
-  API_SUBSCRIPTION_TOKEN: MAP_TOKEN,
+  // Tiles are self-hosted and need no token, so no query param is appended.
+  hasAPISubscriptionQueryParameter: false,
 
   // Brand mode icons (leaf badges + glyphs from the brand guidelines): the
   // default sprite with six symbols swapped, see static/assets/svg-sprite.nta.svg.
@@ -132,9 +105,6 @@ export default {
   defaultMapZoom: 7,
 
   map: {
-    // Matches config.default.js's own values — Mapbox's tiles are native
-    // 512px, same as HSL's hsl-map-server, so no override needed (unlike
-    // CARTO's 256px tiles, the original pick here).
     tileSize: 512,
     zoomOffset: -1,
     areaBounds: {
@@ -144,7 +114,7 @@ export default {
       corner2: [51.3, -5.9],
     },
     attribution:
-      '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors &copy; <a href="https://www.mapbox.com/about/maps/" target="_blank">Mapbox</a>',
+      '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a>',
   },
 
   mainMenu: {
