@@ -84,3 +84,17 @@
     }
   }
 }
+
+/* Origin/destination icons in the search form come from the autosuggest
+   package, which hardcodes the upstream green/pink; use the brand colours
+   ($from-color/$to-color) instead. */
+[class*='autosuggest-input-icon'] {
+  &[class*='origin'] svg {
+    color: $from-color !important;
+    fill: $from-color !important;
+  }
+
+  &[class*='destination'] svg {
+    fill: $to-color !important;
+  }
+}
