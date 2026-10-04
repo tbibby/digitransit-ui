@@ -133,6 +133,8 @@ export const OtpCornerNamingPattern = Object.freeze({
   fi: /katujen .* ja .* kulma/,
   sv: /hörnet av .* och .*/,
   en: /corner of .* and .*/,
+  // OTP has no Irish locale and falls back to English street-corner names
+  ga: /corner of .* and .*/,
 });
 
 /**
