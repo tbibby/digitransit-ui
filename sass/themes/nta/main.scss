@@ -82,6 +82,17 @@
     .map-route-number {
       line-height: 1;
     }
+
+    /* Vertically centre the mode icon in the taller label. */
+    .icon-container {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .map-route-icon {
+      display: block;
+    }
   }
 }
 
